@@ -2912,6 +2912,8 @@ wBrunosRoomSceneID::                db
 wKarensRoomSceneID::                db
 wLancesRoomSceneID::                db
 wHallOfFameSceneID::                db
+wPalletTownSceneID::                db
+wOaksLabSceneID::                   db
 
 	ds 111
 

@@ -9,6 +9,7 @@ PlayersHouse1F_MapScripts:
 
 .DummyScene:
 	setevent EVENT_OAK_ABSENCE
+	setmapscene OAKS_LAB, SCENE_OAKSLAB_OAK_ISNT_PRESENT
 	end
 
 RedsMom:

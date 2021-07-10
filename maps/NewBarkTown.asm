@@ -1,16 +1,98 @@
 	object_const_def
 	const NEWBARKTOWN_TEACHER
 	const NEWBARKTOWN_FISHER
+	const NEWBARKTOWN_OAK
 
 NewBarkTown_MapScripts:
 	def_scene_scripts
+	scene_script .DummyScene
+	scene_script .DummyScene
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
 
+.DummyScene:
+	disappear NEWBARKTOWN_OAK
+	end
+
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_NEW_BARK
 	endcallback
+
+NewBarkOakFar:
+	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+NewBarkOak:
+	setscene SCENE_FINISHED
+	clearevent EVENT_OAK_ABSENCE
+	setmapscene OAKS_LAB, SCENE_OAKSLAB_FIRST_TIME
+	playmusic MUSIC_PROF_OAK
+	opentext
+	turnobject PLAYER, DOWN
+	writetext OakAppearsText
+	waitbutton
+	closetext
+	moveobject NEWBARKTOWN_OAK, 8, 5
+	showemote EMOTE_SHOCK, PLAYER, 15
+	appear NEWBARKTOWN_OAK
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iffalse .skip
+	applymovement NEWBARKTOWN_OAK, NewBarkOakAdjustRight
+.skip
+	applymovement NEWBARKTOWN_OAK, NewBarkOakMovement
+	opentext
+	writetext OakWalksUpText
+	waitbutton
+	closetext
+	follow NEWBARKTOWN_OAK, PLAYER
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iffalse .skip2
+	applymovement NEWBARKTOWN_OAK, NewBarkOakAdjustLeft
+.skip2
+	applymovement NEWBARKTOWN_OAK, NewBarkOakToLabMovement
+	disappear NEWBARKTOWN_OAK
+	stopfollow
+	playsound SFX_ENTER_DOOR
+	applymovement PLAYER, NewBarkPlayerEnterLabMovement
+	warpfacing UP, OAKS_LAB, 5, 11
+	end
+
+NewBarkOakAdjustLeft:
+	step LEFT
+	step_end
+
+NewBarkOakAdjustRight:
+	step RIGHT
+	step_end
+
+NewBarkOakMovement:
+	step UP
+	step RIGHT
+	step UP
+	step RIGHT
+	step UP
+	step_end
+
+NewBarkOakToLabMovement:
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step LEFT
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step UP
+	step_end
+
+NewBarkPlayerEnterLabMovement:
+	step UP
+	step_end
 
 NewBarkTownTeacherScript:
 	jumptextfaceplayer NewBarkTownTeacherText
@@ -29,6 +111,25 @@ OaksLabSign:
 
 BluesHouseSign:
 	jumptext BluesHouseSignText
+
+OakAppearsText::
+	text "OAK: Hey! Wait!"
+	line "Don't go out!@"
+	text_end
+
+OakWalksUpText::
+	text "OAK: It's unsafe!"
+	line "Wild #MON live"
+	cont "in tall grass!"
+
+	para "You need your own"
+	line "#MON for your"
+	cont "protection."
+	cont "I know!"
+
+	para "Here, come with"
+	line "me!"
+	done
 
 NewBarkTownTeacherText:
 	text "I'm raising"
@@ -77,6 +178,8 @@ NewBarkTown_MapEvents:
 	warp_event 12, 11, OAKS_LAB, 1
 
 	def_coord_events
+	coord_event 10,  1, SCENE_DEFAULT, NewBarkOak
+	coord_event 11,  1, SCENE_DEFAULT, NewBarkOakFar
 
 	def_bg_events
 	bg_event  7,  9, BGEVENT_READ, NewBarkTownSign
