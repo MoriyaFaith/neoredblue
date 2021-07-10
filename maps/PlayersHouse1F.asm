@@ -8,8 +8,6 @@ PlayersHouse1F_MapScripts:
 	def_callbacks
 
 .DummyScene:
-	setevent EVENT_OAK_ABSENCE
-	setmapscene OAKS_LAB, SCENE_OAKSLAB_OAK_ISNT_PRESENT
 	end
 
 RedsMom:

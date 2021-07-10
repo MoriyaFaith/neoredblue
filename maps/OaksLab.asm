@@ -7,22 +7,13 @@
 
 OaksLab_MapScripts:
 	def_scene_scripts
-	scene_script .ByeBlue
 	scene_script .nothing
-	scene_script .ByeOak
 	scene_script .GetStarter
+	scene_script .nothing
 
 	def_callbacks
 
 .nothing:
-	end
-
-.ByeBlue: ; unreferenced
-	disappear OAKSLAB_BLUE
-	end
-
-.ByeOak: ; unreferenced
-	disappear OAKSLAB_OAK
 	end
 
 .GetStarter: ; unreferenced
@@ -30,7 +21,7 @@ OaksLab_MapScripts:
 	appear OAKSLAB_OAK
 	applymovement OAKSLAB_OAK, OaksLabOakWalksUp
 	applymovement PLAYER, OaksLabWalkuptoOak
-	setscene SCENE_OAKSLAB_BLUE_PRESENT
+	setscene SCENE_OAKSLAB_NOTHING
 	end
 
 Oak:
@@ -39,8 +30,8 @@ Oak:
 
 Blue:
 	faceplayer
-	checkevent EVENT_OAK_ABSENCE
-	iftrue .checkstarter
+	checkevent EVENT_OAKSLAB_OAK
+	iffalse .checkstarter
 	opentext
 	writetext OaksLabBlueIsntAroundText
 	waitbutton
@@ -592,8 +583,8 @@ OaksLab_MapEvents:
 	warp_event  5, 11, NEW_BARK_TOWN, 3
 
 	def_coord_events
-	coord_event 4,  6, SCENE_OAKSLAB_BLUE_PRESENT, AttempttoLeaveFar
-	coord_event 5,  6, SCENE_OAKSLAB_BLUE_PRESENT, AttempttoLeave
+	coord_event 4,  6, SCENE_OAKSLAB_GETTING_STARTER, AttempttoLeaveFar
+	coord_event 5,  6, SCENE_OAKSLAB_GETTING_STARTER, AttempttoLeave
 
 	def_bg_events
 	bg_event  6,  1, BGEVENT_READ, OaksLabBookshelf
@@ -614,8 +605,8 @@ OaksLab_MapEvents:
 	bg_event  0,  1, BGEVENT_READ, OaksLabPC
 
 	def_object_events
-	object_event  5,  2, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Oak, -1
-	object_event  4,  3, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Blue, -1
+	object_event  5,  2, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Oak, EVENT_OAKSLAB_OAK
+	object_event  4,  3, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Blue, EVENT_RIVAL_OAKSLAB
 	object_event  1,  9, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant1Script, -1
 	object_event  8, 10, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant3Script, -1
 	object_event  2, 10, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant3Script, -1

@@ -10,6 +10,11 @@ NewBarkTown_MapScripts:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
+    callback MAPCALLBACK_OBJECTS, .OakDisappear
+
+.OakDisappear:
+    disappear NEWBARKTOWN_OAK
+    end
 
 .DummyScene:
 	disappear NEWBARKTOWN_OAK
@@ -23,7 +28,6 @@ NewBarkOakFar:
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 NewBarkOak:
 	setscene SCENE_FINISHED
-	clearevent EVENT_OAK_ABSENCE
 	setmapscene OAKS_LAB, SCENE_OAKSLAB_FIRST_TIME
 	playmusic MUSIC_PROF_OAK
 	opentext
@@ -190,4 +194,4 @@ NewBarkTown_MapEvents:
 	def_object_events
 	object_event  3,  8, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 12, 14, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
-	object_event  0,  0, SPRITE_OAK, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, EVENT_OAK_ABSENCE
+	object_event  0,  0, SPRITE_OAK, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1

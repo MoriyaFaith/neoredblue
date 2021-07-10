@@ -131,8 +131,8 @@ NamingScreen:
 	db "YOUR NAME?@"
 
 .Rival:
-	ld de, SilverSpriteGFX
-	ld b, BANK(SilverSpriteGFX)
+	ld de, BlueSpriteGFX
+	ld b, BANK(BlueSpriteGFX)
 	call .LoadSprite
 	hlcoord 5, 2
 	ld de, .RivalNameString
@@ -215,8 +215,16 @@ NamingScreen:
 	ld a, e
 	cp LOW(KrisSpriteGFX)
 	jr nz, .not_kris
-	ld b, SPRITE_ANIM_INDEX_BLUE_WALK
+	ld b, SPRITE_ANIM_INDEX_GREEN_WALK
 .not_kris
+	ld a, d
+	cp HIGH(BlueSpriteGFX)
+	jr nz, .not_blue
+	ld a, e
+	cp LOW(BlueSpriteGFX)
+	jr nz, .not_kris
+	ld b, SPRITE_ANIM_INDEX_BLUE_WALK
+.not_blue
 	ld a, b
 	depixel 4, 4, 4, 0
 	call InitSpriteAnimStruct

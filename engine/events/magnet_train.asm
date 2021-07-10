@@ -300,7 +300,7 @@ MagnetTrain_Jumptable:
 	ld a, [wPlayerGender]
 	bit PLAYERGENDER_FEMALE_F, a
 	jr z, .got_gender
-	ld b, SPRITE_ANIM_INDEX_MAGNET_TRAIN_BLUE
+	ld b, SPRITE_ANIM_INDEX_MAGNET_TRAIN_GREEN
 .got_gender
 	pop af
 	ldh [rSVBK], a
