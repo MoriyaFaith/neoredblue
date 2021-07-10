@@ -11,7 +11,7 @@ TrainerPicPointers::
 	dba_pic JasminePic
 	dba_pic ChuckPic
 	dba_pic ClairPic
-	dba_pic Rival1Pic
+	dba_pic Blue1Pic
 	dba_pic PokemonProfPic
 	dba_pic WillPic
 	dba_pic CalPic
@@ -44,7 +44,7 @@ TrainerPicPointers::
 	dba_pic SwimmerfPic
 	dba_pic SailorPic
 	dba_pic SuperNerdPic
-	dba_pic Rival2Pic
+	dba_pic Blue2Pic
 	dba_pic GuitaristPic
 	dba_pic HikerPic
 	dba_pic BikerPic

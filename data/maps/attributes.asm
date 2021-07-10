@@ -111,6 +111,8 @@ ENDM
 
 	map_attributes PlayersHouse1F, PLAYERS_HOUSE_1F, $00, 0
 	map_attributes PlayersHouse2F, PLAYERS_HOUSE_2F, $00, 0
+	map_attributes BluesHouse, BLUES_HOUSE, $00, 0
+	map_attributes OaksLab, PLAYERS_HOUSE_2F, $00, 0
 
 	map_attributes IndigoPlateauPokecenter1F, INDIGO_PLATEAU_POKECENTER_1F, $00, 0
 	map_attributes WillsRoom, WILLS_ROOM, $00, 0

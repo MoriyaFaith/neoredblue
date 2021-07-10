@@ -17,7 +17,7 @@ INCBIN "gfx/trainers/pryce.gbcpal", middle_colors
 INCBIN "gfx/trainers/jasmine.gbcpal", middle_colors
 INCBIN "gfx/trainers/chuck.gbcpal", middle_colors
 INCBIN "gfx/trainers/clair.gbcpal", middle_colors
-INCBIN "gfx/trainers/rival1.gbcpal", middle_colors
+INCBIN "gfx/trainers/blue1.gbcpal", middle_colors
 INCBIN "gfx/trainers/oak.gbcpal", middle_colors
 INCBIN "gfx/trainers/will.gbcpal", middle_colors
 INCBIN "gfx/trainers/cal.gbcpal", middle_colors
@@ -50,7 +50,7 @@ INCBIN "gfx/trainers/swimmer_m.gbcpal", middle_colors
 INCBIN "gfx/trainers/swimmer_f.gbcpal", middle_colors
 INCBIN "gfx/trainers/sailor.gbcpal", middle_colors
 INCBIN "gfx/trainers/super_nerd.gbcpal", middle_colors
-INCBIN "gfx/trainers/rival2.gbcpal", middle_colors
+INCBIN "gfx/trainers/blue2.gbcpal", middle_colors
 INCBIN "gfx/trainers/guitarist.gbcpal", middle_colors
 INCBIN "gfx/trainers/hiker.gbcpal", middle_colors
 INCBIN "gfx/trainers/biker.gbcpal", middle_colors

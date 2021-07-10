@@ -1524,23 +1524,20 @@ _MayRegisterItemText::
 	done
 
 _OakText1::
-	text "Hello! Sorry to"
-	line "keep you waiting!"
+	text "Hello there!"
+	line "Welcome to the"
+	cont "world of #MON!"
 
-	para "Welcome to the"
-	line "world of #MON!"
-
-	para "My name is OAK."
-
-	para "People call me the"
-	line "#MON PROF."
+	para "My name is OAK!"
+	line "People call me"
+	cont "the #MON PROF!"
 	prompt
 
 _OakText2::
-	text "This world is in-"
-	line "habited by crea-"
-	cont "tures that we call"
-	cont "#MON.@"
+	text "This world is"
+	line "inhabited by"
+	cont "creatures called"
+	cont "#MON!@"
 	text_end
 
 _OakText3::
@@ -1550,26 +1547,15 @@ _OakText3::
 	text_end ; unreferenced
 
 _OakText4::
-	text "People and #MON"
-	line "live together by"
-
-	para "supporting each"
-	line "other."
-
-	para "Some people play"
-	line "with #MON, some"
-	cont "battle with them."
+	text "For some people,"
+	line "#MON are"
+	cont "pets. Others use"
+	cont "them for fights."
 	prompt
 
 _OakText5::
-	text "But we don't know"
-	line "everything about"
-	cont "#MON yet."
+	text "Myself..."
 
-	para "There are still"
-	line "many mysteries to"
-	cont "solve."
-
-	para "That's why I study"
-	line "#MON every day."
+	para "I study #MON"
+	line "as a profession."
 	prompt

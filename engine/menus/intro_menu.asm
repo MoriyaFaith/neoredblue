@@ -80,7 +80,6 @@ NewGame:
 AreYouABoyOrAreYouAGirl:
 	farcall Mobile_AlwaysReturnNotCarry ; mobile
 	jr c, .ok
-	farcall InitGender
 	ret
 
 .ok
@@ -657,7 +656,7 @@ OakSpeech:
 	call RotateThreePalettesRight
 	call ClearTilemap
 
-	ld a, WOOPER
+	ld a, NIDORINO
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
 	call GetBaseData
@@ -695,6 +694,9 @@ OakSpeech:
 	call RotateThreePalettesRight
 	call ClearTilemap
 
+	farcall InitGender
+	call ClearTilemap
+
 	xor a
 	ld [wCurPartySpecies], a
 	farcall DrawIntroPlayerPic
@@ -706,6 +708,35 @@ OakSpeech:
 	ld hl, OakText6
 	call PrintText
 	call NamePlayer
+		ld hl, OakText9
+	call PrintText
+	call RotateThreePalettesRight
+	call ClearTilemap
+
+	ld a, RIVAL1
+	ld [wTrainerClass], a
+	call Intro_PrepTrainerPic
+
+	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
+	call GetSGBLayout
+	call Intro_RotatePalettesLeftFrontpic
+
+	ld hl, OakText8
+	call PrintText
+	call NameRivalRB
+	ld hl, OakText10
+	call PrintText
+	call RotateThreePalettesRight
+	call ClearTilemap
+
+	xor a
+	ld [wCurPartySpecies], a
+	farcall DrawIntroPlayerPic
+
+	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
+	call GetSGBLayout
+	call Intro_RotatePalettesLeftFrontpic
+
 	ld hl, OakText7
 	call PrintText
 	ret
@@ -741,6 +772,18 @@ OakText6:
 
 OakText7:
 	text_far _OakText7
+	text_end
+
+OakText8:
+	text_far _OakText8
+	text_end
+
+OakText9:
+	text_far _OakText9
+	text_end
+
+OakText10:
+	text_far _OakText10
 	text_end
 
 NamePlayer:
@@ -784,9 +827,47 @@ NamePlayer:
 	ret
 
 .Chris:
-	db "CHRIS@@@@@@"
+	db "RED@@@@@@@@"
 .Kris:
-	db "KRIS@@@@@@@"
+	db "GREEN@@@@@@"
+
+NameRivalRB:
+	farcall MovePlayerPicRight
+	farcall ShowRivalNamingChoices
+	ld a, [wMenuCursorY]
+	dec a
+	jr z, .NewName
+	call StoreRivalName
+	farcall ApplyMonOrTrainerPals
+	farcall MovePlayerPicLeft
+	ret
+
+.NewName:
+	ld b, NAME_RIVAL
+	ld de, wRivalName
+	farcall NamingScreen
+
+	call RotateThreePalettesRight
+	call ClearTilemap
+
+	call LoadFontsExtra
+	call WaitBGMap
+
+	ld a, RIVAL1
+	ld [wTrainerClass], a
+	call Intro_PrepTrainerPic
+
+	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
+	call GetSGBLayout
+	call RotateThreePalettesLeft
+
+	ld hl, wRivalName
+	ld de, .Blue
+	call InitName
+	ret
+
+.Blue:
+	db "BLUE@@@@@@"
 
 GSShowPlayerNamingChoices: ; unreferenced
 	call LoadMenuHeader
@@ -803,6 +884,16 @@ StorePlayerName:
 	ld hl, wPlayerName
 	call ByteFill
 	ld hl, wPlayerName
+	ld de, wStringBuffer2
+	call CopyName2
+	ret
+
+StoreRivalName:
+	ld a, "@"
+	ld bc, NAME_LENGTH
+	ld hl, wRivalName
+	call ByteFill
+	ld hl, wRivalName
 	ld de, wStringBuffer2
 	call CopyName2
 	ret
