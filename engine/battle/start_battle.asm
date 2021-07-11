@@ -78,7 +78,7 @@ PlayBattleMusic:
 	ld de, MUSIC_JOHTO_WILD_BATTLE
 	ld a, [wTimeOfDay]
 	cp NITE_F
-	jr nz, .done
+	jp nz, .done
 	ld de, MUSIC_JOHTO_WILD_BATTLE_NIGHT
 	jr .done
 
@@ -88,7 +88,7 @@ PlayBattleMusic:
 
 .trainermusic
 	ld de, MUSIC_CHAMPION_BATTLE
-	cp CHAMPION
+	cp RIVAL3 
 	jr z, .done
 	cp RED
 	jr z, .done
@@ -99,8 +99,14 @@ PlayBattleMusic:
 	jr z, .done
 	cp GRUNTF
 	jr z, .done
+	cp EXECUTIVEM
+	jr z, .done
+	cp EXECUTIVEF
+	jr z, .done
 
-	ld de, MUSIC_KANTO_GYM_LEADER_BATTLE
+
+
+	ld de, MUSIC_GYM_LEADER_BATTLE
 	farcall IsKantoGymLeader
 	jr c, .done
 
@@ -112,15 +118,13 @@ PlayBattleMusic:
 
 	ld de, MUSIC_RIVAL_BATTLE
 	ld a, [wOtherTrainerClass]
-	cp RIVAL1
-	jr z, .done
-	cp RIVAL2
+	cp GIOVANNI
 	jr nz, .othertrainer
 
 	ld a, [wOtherTrainerID]
-	cp RIVAL2_2_CHIKORITA ; Rival in Indigo Plateau
+	cp GIOVANNI_GYM
 	jr c, .done
-	ld de, MUSIC_CHAMPION_BATTLE
+	ld de, MUSIC_GYM_LEADER_BATTLE
 	jr .done
 
 .othertrainer

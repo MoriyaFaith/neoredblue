@@ -335,7 +335,7 @@ PlaceBattlersName:
 	jr nz, .enemy
 
 	ld de, wBattleMonNickname
-	jr PlaceCommandCharacter
+	jp PlaceCommandCharacter
 
 .enemy
 	ld de, EnemyText
@@ -343,7 +343,7 @@ PlaceBattlersName:
 	ld h, b
 	ld l, c
 	ld de, wEnemyMonNickname
-	jr PlaceCommandCharacter
+	jp PlaceCommandCharacter
 
 PlaceEnemysName::
 	push de
@@ -357,6 +357,12 @@ PlaceEnemysName::
 	jr z, .rival
 	cp RIVAL2
 	jr z, .rival
+	cp RIVAL3
+	jr z, .rival
+
+	ld a, [wOtherTrainerID]
+	cp GIOVANNI_GYM
+	jr z, .leadergio
 
 	ld de, wOTClassName
 	call PlaceString
@@ -374,9 +380,25 @@ PlaceEnemysName::
 	ld de, wRivalName
 	jr PlaceCommandCharacter
 
+.leadergio
+	ld de, .gioclassname
+	call PlaceString
+	ld h, b
+	ld l, c
+	ld de, String_Space
+	call PlaceString
+	push bc
+	callfar Battle_GetTrainerName
+	pop hl
+	ld de, wStringBuffer1
+	jr PlaceCommandCharacter
+
 .linkbattle
 	ld de, wOTClassName
 	jr PlaceCommandCharacter
+
+.gioclassname
+	db "LEADER@"
 
 PlaceGenderedPlayerName::
 	push de

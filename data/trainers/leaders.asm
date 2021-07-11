@@ -16,17 +16,14 @@ GymLeaders:
 	db WILL
 	db BRUNO
 	db KAREN
-	db KOGA
-	db CHAMPION
-	db RED
+	db JANINE
 ; fallthrough
 KantoGymLeaders:
 	db BROCK
 	db MISTY
 	db LT_SURGE
 	db ERIKA
-	db JANINE
+	db KOGA
 	db SABRINA
 	db BLAINE
-	db BLUE
 	db -1

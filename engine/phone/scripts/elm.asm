@@ -12,11 +12,11 @@ ElmPhoneCalleeScript:
 	iftrue .eggunhatched
 	checkevent EVENT_ELMS_AIDE_IN_LAB
 	iftrue .assistant
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	checkevent EVENT_GOT_POKEDEX_FROM_OAK
 	iftrue .checkingegg
 	checkevent EVENT_ELM_CALLED_ABOUT_STOLEN_POKEMON
 	iftrue .stolen
-	checkevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
+	checkevent EVENT_GOT_POKEDEX_FROM_OAK
 	iftrue .sawmrpokemon
 	farwritetext ElmPhoneHealYourMonText
 	end

@@ -622,22 +622,22 @@ _CGB_TrainerCard:
 	ld a, KRIS
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ld a, BUGSY
+	ld a, BROCK
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ld a, WHITNEY
+	ld a, MISTY
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ld a, MORTY
+	ld a, ERIKA ; LT_SURGE
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ld a, FALKNER ; CLAIR
+	ld a, KOGA
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ld a, JASMINE
+	ld a, SABRINA ; GIOVANNI
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ld a, PRYCE ; CHUCK
+	ld a, BLAINE
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
 	ld a, PREDEFPAL_CGB_BADGE
@@ -664,37 +664,37 @@ _CGB_TrainerCard:
 	ld a, $1 ; kris
 .got_gender2
 	call FillBoxCGB
-	hlcoord 2, 11, wAttrmap
-	lb bc, 2, 4
-	ld a, $5 ; falkner
+	hlcoord 3, 10, wAttrmap
+	lb bc, 3, 3
+	ld a, $2 ; brock
 	call FillBoxCGB
-	hlcoord 6, 11, wAttrmap
-	lb bc, 2, 4
-	ld a, $2 ; bugsy
+	hlcoord 7, 10, wAttrmap
+	lb bc, 3, 3
+	ld a, $3 ; misty
 	call FillBoxCGB
-	hlcoord 10, 11, wAttrmap
-	lb bc, 2, 4
-	ld a, $3 ; whitney
+	hlcoord 11, 10, wAttrmap
+	lb bc, 3, 3
+	ld a, $4 ; lt surge
 	call FillBoxCGB
-	hlcoord 14, 11, wAttrmap
-	lb bc, 2, 4
-	ld a, $4 ; morty
+	hlcoord 15, 10, wAttrmap
+	lb bc, 3, 3
+	ld a, $4 ; erika
 	call FillBoxCGB
-	hlcoord 2, 14, wAttrmap
-	lb bc, 2, 4
-	ld a, $7 ; chuck
+	hlcoord 3, 13, wAttrmap
+	lb bc, 3, 3
+	ld a, $5 ; koga
 	call FillBoxCGB
-	hlcoord 6, 14, wAttrmap
-	lb bc, 2, 4
-	ld a, $6 ; jasmine
+	hlcoord 7, 13, wAttrmap
+	lb bc, 3, 3
+	ld a, $6 ; sabrina
 	call FillBoxCGB
-	hlcoord 10, 14, wAttrmap
-	lb bc, 2, 4
-	ld a, $7 ; pryce
+	hlcoord 11, 13, wAttrmap
+	lb bc, 3, 3
+	ld a, $7 ; blaine
 	call FillBoxCGB
-	hlcoord 14, 14, wAttrmap
-	lb bc, 2, 4
-	ld a, $5 ; clair
+	hlcoord 15, 13, wAttrmap
+	lb bc, 3, 3
+	ld a, $6 ; giovanni
 	call FillBoxCGB
 	; top-right corner still uses the border's palette
 	hlcoord 18, 1, wAttrmap

@@ -27,7 +27,6 @@ CHRIS EQU __trainer_class__
 	const PHONECONTACT_BUENA
 NUM_NONTRAINER_PHONECONTACTS EQU const_value - 1
 
-KRIS EQU __trainer_class__
 	trainerclass FALKNER ; 1
 	const FALKNER1
 
@@ -53,21 +52,21 @@ KRIS EQU __trainer_class__
 	const CLAIR1
 
 	trainerclass RIVAL1 ; 9
-	const RIVAL1_1_CHIKORITA
-	const RIVAL1_1_CYNDAQUIL
-	const RIVAL1_1_TOTODILE
-	const RIVAL1_2_CHIKORITA
-	const RIVAL1_2_CYNDAQUIL
-	const RIVAL1_2_TOTODILE
-	const RIVAL1_3_CHIKORITA
-	const RIVAL1_3_CYNDAQUIL
-	const RIVAL1_3_TOTODILE
-	const RIVAL1_4_CHIKORITA
-	const RIVAL1_4_CYNDAQUIL
-	const RIVAL1_4_TOTODILE
-	const RIVAL1_5_CHIKORITA
-	const RIVAL1_5_CYNDAQUIL
-	const RIVAL1_5_TOTODILE
+	const RIVAL1_1_BULBASAUR
+	const RIVAL1_1_CHARMANDER
+	const RIVAL1_1_SQUIRTLE
+	const RIVAL1_2_BULBASAUR
+	const RIVAL1_2_CHARMANDER
+	const RIVAL1_2_SQUIRTLE
+	const RIVAL1_3_BULBASAUR
+	const RIVAL1_3_CHARMANDER
+	const RIVAL1_3_SQUIRTLE
+	const RIVAL1_4_BULBASAUR
+	const RIVAL1_4_CHARMANDER
+	const RIVAL1_4_SQUIRTLE
+	const RIVAL1_5_BULBASAUR
+	const RIVAL1_5_CHARMANDER
+	const RIVAL1_5_SQUIRTLE
 
 	trainerclass POKEMON_PROF ; a
 
@@ -452,12 +451,12 @@ KRIS EQU __trainer_class__
 	const MARKUS
 
 	trainerclass RIVAL2 ; 2a
-	const RIVAL2_1_CHIKORITA
-	const RIVAL2_1_CYNDAQUIL
-	const RIVAL2_1_TOTODILE
-	const RIVAL2_2_CHIKORITA
-	const RIVAL2_2_CYNDAQUIL
-	const RIVAL2_2_TOTODILE
+	const RIVAL2_1_BULBASAUR
+	const RIVAL2_1_CHARMANDER
+	const RIVAL2_1_SQUIRTLE
+	const RIVAL2_2_BULBASAUR
+	const RIVAL2_2_CHARMANDER
+	const RIVAL2_2_SQUIRTLE
 
 	trainerclass GUITARIST ; 2b
 	const CLYDE
@@ -686,8 +685,8 @@ KRIS EQU __trainer_class__
 	trainerclass RED ; 3f
 	const RED1
 
-	trainerclass BLUE ; 40
-	const BLUE1
+	trainerclass RIVAL3 ; 40
+	const RIVAL3_1
 
 	trainerclass OFFICER ; 41
 	const KEITH
@@ -703,4 +702,10 @@ KRIS EQU __trainer_class__
 	trainerclass MYSTICALMAN ; 43
 	const EUSINE
 
+	trainerclass GIOVANNI ; 44
+	const GIOVANNI_CELADON
+	const GIOVANNI_SILPH
+	const GIOVANNI_GYM
+
+KRIS EQU __trainer_class__
 NUM_TRAINER_CLASSES EQU __trainer_class__ - 1

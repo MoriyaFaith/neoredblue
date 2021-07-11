@@ -4,6 +4,9 @@
 	const OAKSLAB_SCIENTIST1
 	const OAKSLAB_SCIENTIST2
 	const OAKSLAB_SCIENTIST3
+	const OAKSLAB_POKE_BALL1
+	const OAKSLAB_POKE_BALL2
+	const OAKSLAB_POKE_BALL3
 
 OaksLab_MapScripts:
 	def_scene_scripts
@@ -21,11 +24,73 @@ OaksLab_MapScripts:
 	appear OAKSLAB_OAK
 	applymovement OAKSLAB_OAK, OaksLabOakWalksUp
 	applymovement PLAYER, OaksLabWalkuptoOak
-	setscene SCENE_OAKSLAB_NOTHING
+	turnobject OAKSLAB_BLUE, UP
+	opentext
+	writetext OaksLabRivalWaitingText
+	waitbutton
+	closetext
+	opentext
+	writetext OaksLabChooseMonText
+	waitbutton
+	closetext
+	opentext
+	writetext OaksLabRivalInterjectionText
+	waitbutton
+	closetext
+	opentext
+	writetext OaksLabBePatientText
+	waitbutton
+	closetext
+	setscene SCENE_OAKSLAB_GETTING_STARTER
 	end
 
 Oak:
 	faceplayer
+	checkevent EVENT_GOT_POKEDEX_FROM_OAK
+	iftrue .CheckPokedex
+	checkscene
+	iftrue .ChooseText
+	checkitem OAKS_PARCEL
+	iftrue .Parcel
+	opentext
+	writetext OaksLabRaiseText
+	waitbutton
+	closetext
+	end
+
+.CheckPokedex
+	opentext
+	writetext OakLabDexCheckText
+	waitbutton
+	special ProfOaksPCBoot
+	closetext
+	end
+
+.ChooseText
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	iftrue .FightBack
+	opentext
+	writetext OaksLabWhichText
+	waitbutton
+	closetext
+	end
+
+.FightBack
+	opentext
+	writetext OaksLabFightText
+	waitbutton
+	closetext
+	end
+
+.Parcel
+	opentext
+	writetext OaksLabDeliverParcelText1
+	takeitem OAKS_PARCEL
+	playsound SFX_CAUGHT_MON
+	waitbutton
+	writetext OaksLabDeliverParcelText2
+	waitbutton
+	closetext
 	end
 
 Blue:
@@ -57,11 +122,269 @@ Blue:
 AttempttoLeaveFar:
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
 AttempttoLeave:
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	iftrue .RivalBattle
 	opentext
 	writetext OaksLabLeavingText
 	waitbutton
 	closetext
 	applymovement PLAYER, OaksLabBlueWalksUp1
+	end
+
+.RivalBattle
+	turnobject OAKSLAB_BLUE, DOWN
+	playmusic MUSIC_RIVAL_ENCOUNTER
+	opentext
+	writetext OaksLabRivalChallengeText
+	waitbutton
+	closetext
+	turnobject PLAYER, UP
+	checkevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
+	iffalse .skip
+	applymovement OAKSLAB_BLUE, OaksLabBlueWalksLeft1
+	setevent EVENT_GOT_POKEDEX_FROM_OAK
+.skip
+	checkevent EVENT_GOT_SQUIRTBOTTLE
+	iftrue .Squirtle
+	checkevent EVENT_GOT_BULBASAUR_FROM_OAK
+	iftrue .Bulbasaur
+	applymovement OAKSLAB_BLUE, OaksLabBlueWalksLeft2
+	applymovement OAKSLAB_BLUE, OaksLabBlueWalksDown1
+	winlosstext OaksLabRivalLoseText, OaksLabRivalWinText
+	setlasttalked OAKSLAB_BLUE
+	loadtrainer RIVAL1, RIVAL1_1_SQUIRTLE
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	dontrestartmapmusic
+	reloadmap
+	sjump .AfterBattle
+
+.Squirtle
+	applymovement OAKSLAB_BLUE, OaksLabBlueWalksLeft3
+	applymovement OAKSLAB_BLUE, OaksLabBlueWalksDown1
+	winlosstext OaksLabRivalLoseText, OaksLabRivalWinText
+	setlasttalked OAKSLAB_BLUE
+	loadtrainer RIVAL1, RIVAL1_1_BULBASAUR
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	dontrestartmapmusic
+	reloadmap
+	sjump .AfterBattle
+
+.Bulbasaur
+	applymovement OAKSLAB_BLUE, OaksLabBlueWalksLeft1
+	applymovement OAKSLAB_BLUE, OaksLabBlueWalksDown1
+	winlosstext OaksLabRivalLoseText, OaksLabRivalWinText
+	setlasttalked OAKSLAB_BLUE
+	loadtrainer RIVAL1, RIVAL1_1_CHARMANDER
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	dontrestartmapmusic
+	reloadmap
+	sjump .AfterBattle
+
+.AfterBattle
+	playmusic MUSIC_RIVAL_AFTER
+	opentext
+	writetext OaksLabRivalToughenUpText
+	waitbutton
+	closetext
+	checkevent EVENT_GOT_POKEDEX_FROM_OAK
+	iftrue .adjust
+	applymovement OAKSLAB_BLUE, OaksLabBlueWalksLeft1
+.adjusted
+	applymovement OAKSLAB_BLUE, OaksLabBlueWalksDown6
+	setscene 0
+	disappear OAKSLAB_BLUE
+	special HealParty
+	playmapmusic
+	end
+.adjust
+	applymovement OAKSLAB_BLUE, OaksLabBlueWalksRight1
+	clearevent EVENT_GOT_POKEDEX_FROM_OAK
+	sjump .adjusted
+
+CharmanderPokeBallScript:
+	checkevent EVENT_OAKSLAB_OAK
+	iftrue LookatOakPokeBallScript
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	iftrue LookatOakPokeBallScript
+	turnobject OAKSLAB_OAK, DOWN
+	refreshscreen
+	pokepic CHARMANDER
+	cry CHARMANDER
+	waitbutton
+	closepokepic
+	opentext
+	writetext OaksLabCharmanderText
+	yesorno
+	iffalse DidntChooseStarterScript
+	disappear OAKSLAB_POKE_BALL1
+	setevent EVENT_GOT_CHARMANDER_FROM_OAK
+	writetext OaksLabMonEnergeticText
+	promptbutton
+	waitsfx
+	getmonname STRING_BUFFER_3, CHARMANDER
+	writetext OaksLabReceivedMonText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	promptbutton
+	givepoke CHARMANDER, 5, NO_ITEM
+	closetext
+	readvar VAR_FACING
+	ifequal RIGHT, .right
+	applymovement OAKSLAB_BLUE, OaksLabBlueWalksDown2
+	applymovement OAKSLAB_BLUE, OaksLabBlueWalksRight3
+	applymovement OAKSLAB_BLUE, OaksLabBlueWalksUp1
+	opentext
+	writetext OaksLabRivalPickingMonText
+	waitbutton
+	closetext
+	turnobject OAKSLAB_BLUE, RIGHT
+	disappear OAKSLAB_POKE_BALL2
+	pause 5
+	turnobject OAKSLAB_BLUE, UP
+	getmonname STRING_BUFFER_3, SQUIRTLE
+	opentext
+	writetext OaksLabRivalReceivedMonText
+	waitbutton
+	setevent EVENT_GOT_A_POKEMON_FROM_OAK
+	closetext
+	end
+
+.right
+	applymovement OAKSLAB_BLUE, OaksLabBlueWalksDown1
+	applymovement OAKSLAB_BLUE, OaksLabBlueWalksRight3
+	turnobject OAKSLAB_BLUE, UP
+	opentext
+	writetext OaksLabRivalPickingMonText
+	waitbutton
+	closetext
+	turnobject OAKSLAB_BLUE, RIGHT
+	disappear OAKSLAB_POKE_BALL2
+	pause 5
+	turnobject OAKSLAB_BLUE, UP
+	getmonname STRING_BUFFER_3, SQUIRTLE
+	opentext
+	writetext OaksLabRivalReceivedMonText
+	waitbutton
+	setevent EVENT_GOT_A_POKEMON_FROM_OAK
+	closetext
+	end
+
+SquirtlePokeBallScript:
+	checkevent EVENT_OAKSLAB_OAK
+	iftrue LookatOakPokeBallScript
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	iftrue LookatOakPokeBallScript
+	turnobject OAKSLAB_OAK, DOWN
+	refreshscreen
+	pokepic SQUIRTLE
+	cry SQUIRTLE
+	waitbutton
+	closepokepic
+	opentext
+	writetext OaksLabSquirtleText
+	yesorno
+	iffalse DidntChooseStarterScript
+	disappear OAKSLAB_POKE_BALL2
+	setevent EVENT_GOT_SQUIRTLE_FROM_OAK
+	writetext OaksLabMonEnergeticText
+	promptbutton
+	waitsfx
+	getmonname STRING_BUFFER_3, SQUIRTLE
+	writetext OaksLabReceivedMonText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	promptbutton
+	givepoke SQUIRTLE, 5, NO_ITEM
+	closetext
+	applymovement OAKSLAB_BLUE, OaksLabBlueWalksDown2
+	applymovement OAKSLAB_BLUE, OaksLabBlueWalksRight4
+	applymovement OAKSLAB_BLUE, OaksLabBlueWalksUp1
+	opentext
+	writetext OaksLabRivalPickingMonText
+	waitbutton
+	closetext
+	turnobject OAKSLAB_BLUE, RIGHT
+	disappear OAKSLAB_POKE_BALL3
+	pause 5
+	turnobject OAKSLAB_BLUE, UP
+	getmonname STRING_BUFFER_3, BULBASAUR
+	opentext
+	writetext OaksLabRivalReceivedMonText
+	waitbutton
+	setevent EVENT_GOT_A_POKEMON_FROM_OAK
+	closetext
+	end
+
+BulbasaurPokeBallScript:
+	checkevent EVENT_OAKSLAB_OAK
+	iftrue LookatOakPokeBallScript
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	iftrue LookatOakPokeBallScript
+	turnobject OAKSLAB_OAK, DOWN
+	refreshscreen
+	pokepic BULBASAUR
+	cry BULBASAUR
+	waitbutton
+	closepokepic
+	opentext
+	writetext OaksLabBulbasaurText
+	yesorno
+	iffalse DidntChooseStarterScript
+	disappear OAKSLAB_POKE_BALL3
+	setevent EVENT_GOT_BULBASAUR_FROM_OAK
+	writetext OaksLabMonEnergeticText
+	promptbutton
+	waitsfx
+	getmonname STRING_BUFFER_3, BULBASAUR
+	writetext OaksLabReceivedMonText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	promptbutton
+	givepoke BULBASAUR, 5, NO_ITEM
+	closetext
+	applymovement OAKSLAB_BLUE, OaksLabBlueWalksDown1
+	applymovement OAKSLAB_BLUE, OaksLabBlueWalksRight2
+	turnobject OAKSLAB_BLUE, UP
+	opentext
+	writetext OaksLabRivalPickingMonText
+	waitbutton
+	closetext
+	turnobject OAKSLAB_BLUE, RIGHT
+	disappear OAKSLAB_POKE_BALL1
+	pause 5
+	turnobject OAKSLAB_BLUE, UP
+	getmonname STRING_BUFFER_3, CHARMANDER
+	opentext
+	writetext OaksLabRivalReceivedMonText
+	waitbutton
+	setevent EVENT_GOT_A_POKEMON_FROM_OAK
+	closetext
+	end
+
+DidntChooseStarterScript:
+	opentext
+	writetext OaksLabWhichText
+	waitbutton
+	closetext
+	end
+
+LookatOakPokeBallScript:
+	checkevent EVENT_GOT_A_POKEMON_FROM_OAK
+	iftrue .LastMon
+	opentext
+	writetext OaksLabBallsText
+	waitbutton
+	closetext
+	end
+
+.LastMon
+	opentext
+	writetext OaksLabLastMonText
+	waitbutton
+	closetext
 	end
 
 OaksAssistant1Script:
@@ -124,6 +447,10 @@ OaksLabBlueWalksDown6:
 	step DOWN
 	step DOWN
 	step DOWN
+	step_end
+
+OaksLabBlueWalksRight1:
+	step RIGHT
 	step_end
 
 OaksLabBlueWalksRight2:
@@ -225,7 +552,7 @@ OaksLabBulbasaurText::
 OaksLabMonEnergeticText::
 	text "This #MON is"
 	line "really energetic!"
-	prompt
+	done
 
 OaksLabReceivedMonText::
 	text "<PLAYER> received"
@@ -431,12 +758,12 @@ OaksLabRivalLoseText::
 	line "Unbelievable!"
 	cont "I picked the"
 	cont "wrong #MON!"
-	prompt
+	done
 
 OaksLabRivalWinText::
 	text "<RIVAL>: Yeah! Am"
 	line "I great or what?"
-	prompt
+	done
 
 OaksLabRivalToughenUpText::
 	text "<RIVAL>: Okay!"
@@ -606,7 +933,10 @@ OaksLab_MapEvents:
 
 	def_object_events
 	object_event  5,  2, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Oak, EVENT_OAKSLAB_OAK
-	object_event  4,  3, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Blue, EVENT_RIVAL_OAKSLAB
+	object_event  4,  3, SPRITE_BLUE, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Blue, EVENT_RIVAL_OAKSLAB
 	object_event  1,  9, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant1Script, -1
 	object_event  8, 10, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant3Script, -1
 	object_event  2, 10, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant3Script, -1
+	object_event  6,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CharmanderPokeBallScript, EVENT_CHARMANDER_POKEBALL_IN_OAKS_LAB
+	object_event  7,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SquirtlePokeBallScript, EVENT_SQUIRTLE_POKEBALL_IN_OAKS_LAB
+	object_event  8,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, BulbasaurPokeBallScript, EVENT_BULBASAUR_POKEBALL_IN_OAKS_LAB
