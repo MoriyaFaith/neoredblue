@@ -56,6 +56,11 @@ ENDM
 	map_const PLAYERS_HOUSE_2F,                             4,  4 ;  3
 	map_const BLUES_HOUSE,                                  4,  4 ;  5
 	map_const OAKS_LAB,                                     5,  6 ;  6
+	map_const ROUTE_1,									   10, 18 ;  7
+	endgroup
+
+	newgroup VIRIDIAN                                             ;  3
+	map_const VIRIDIAN_CITY,							   20, 18
 	endgroup
 
 	newgroup INDIGO                                               ;  4

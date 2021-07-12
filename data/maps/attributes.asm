@@ -95,7 +95,15 @@ endc
 endc
 ENDM
 
-	map_attributes NewBarkTown, NEW_BARK_TOWN, $05, 0
+	map_attributes NewBarkTown, NEW_BARK_TOWN, $0A, NORTH
+	connection north, Route1, ROUTE_1, 0
+
+	map_attributes ViridianCity, VIRIDIAN_CITY, $0A, SOUTH
+	connection south, Route1, ROUTE_1, 5
+
+	map_attributes Route1, ROUTE_1, $0A, NORTH | SOUTH
+	connection north, ViridianCity, VIRIDIAN_CITY, -5
+	connection south, NewBarkTown, NEW_BARK_TOWN, 0
 
 	map_attributes BattleTowerOutside, BATTLE_TOWER_OUTSIDE, $05, 0
 

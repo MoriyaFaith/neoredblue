@@ -9,10 +9,9 @@ SpawnPoints:
 	table_width 4, SpawnPoints
 
 	spawn PLAYERS_HOUSE_2F,              3,  3
-; kanto
+	spawn NEW_BARK_TOWN,                 5,  6
+	spawn VIRIDIAN_CITY,                23, 26
 	spawn INDIGO_PLATEAU_POKECENTER_1F,  7,  9
-; johto
-	spawn NEW_BARK_TOWN,                15,  8
 	spawn BATTLE_TOWER_OUTSIDE,          8, 10
 	spawn NONE,                          6,  2
 

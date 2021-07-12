@@ -43,6 +43,12 @@ BluesHouse_Blocks:
 OaksLab_Blocks:
 	INCBIN "maps/OaksLab.blk"
 
+Route1_Blocks:
+	INCBIN "maps/Route1.blk"
+
+ViridianCity_Blocks:
+	INCBIN "maps/ViridianCity.blk"
+
 SECTION "Map Blocks 3", ROMX
 
 IndigoPlateauPokecenter1F_Blocks:

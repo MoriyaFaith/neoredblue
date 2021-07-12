@@ -73,10 +73,9 @@ NUM_FISHGROUPS EQU const_value - 1
 ; SpawnPoints indexes (see data/maps/spawn_points.asm)
 	const_def
 	const SPAWN_HOME
-; kanto
-	const SPAWN_INDIGO
-; johto
 	const SPAWN_NEW_BARK
+	const SPAWN_VIRIDIAN
+	const SPAWN_INDIGO
 	const SPAWN_BATTLE_TOWER
 	const SPAWN_FAST_SHIP
 NUM_SPAWNS EQU const_value
@@ -114,5 +113,3 @@ KANTO_FLYPOINT EQU const_value
 	const FLY_CINNABAR
 	const FLY_INDIGO
 NUM_FLYPOINTS EQU const_value
-
-MAX_OUTDOOR_SPRITES EQU 23 ; see engine/overworld/overworld.asm

@@ -95,9 +95,9 @@ Landmarks:
 	landmark  68, 132, SeafoamIslandsName
 	landmark  52, 132, CinnabarIslandName
 	landmark  52, 120, Route21Name
-	landmark  36,  68, Route22Name
+	landmark  36,  76, Route22Name
 	landmark  28,  52, VictoryRoadName
-	landmark  28,  44, Route23Name
+	landmark  28,  60, Route23Name
 	landmark  28,  36, IndigoPlateauName
 	landmark  28,  92, Route26Name
 	landmark  20, 100, Route27Name

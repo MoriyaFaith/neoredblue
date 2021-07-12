@@ -9,12 +9,31 @@ BluesHouse_MapScripts:
 DaisyScript:
 	faceplayer
 	opentext
+	checkevent EVENT_GOT_POKEDEX_FROM_OAK
+	iffalse .NoMon
+	checkitem TOWN_MAP
+	iffalse .GiveMap
 	readvar VAR_HOUR
 	ifequal 15, .ThreePM
-	writetext DaisyHelloText
+	writetext BluesHouseDaisyWalkingText
 	waitbutton
 	closetext
 	end
+
+.NoMon
+	writetext DaisyInitialText
+	waitbutton
+	closetext
+	end
+
+.GiveMap
+	writetext DaisyOfferMapText
+	waitbutton
+	verbosegiveitem TOWN_MAP
+	writetext DaisyUseMapText
+	closetext
+	end
+	
 
 .ThreePM:
 	checkflag ENGINE_DAISYS_GROOMING
@@ -63,18 +82,35 @@ DaisyScript:
 	closetext
 	end
 
-DaisyHelloText:
-	text "DAISY: Hi! My kid"
-	line "brother is the GYM"
+DaisyInitialText::
+	text "Hi <PLAYER>!"
+	line "<RIVAL> is out at"
+	cont "Grandpa's lab."
+	done
 
-	para "LEADER in VIRIDIAN"
-	line "CITY."
+DaisyOfferMapText::
+	text "Grandpa asked you"
+	line "to run an errand?"
+	cont "Here, this will"
+	cont "help you!"
+	done
 
-	para "But he goes out"
-	line "of town so often,"
+DaisyBagFullText::
+	text "You have too much"
+	line "stuff with you."
+	done
 
-	para "it causes problems"
-	line "for the trainers."
+DaisyUseMapText::
+	text "Use the TOWN MAP"
+	line "to find out where"
+	cont "you are."
+	done
+
+BluesHouseDaisyWalkingText::
+	text "#MON are living"
+	line "things! If they"
+	cont "get tired, give"
+	cont "them a rest!"
 	done
 
 DaisyOfferGroomingText:

@@ -20,6 +20,7 @@ MapGroupPointers::
 	dw MapGroup_CableClub     ;  1
 	dw MapGroup_BattleTower   ;  2
 	dw MapGroup_NewBark       ;  3
+	dw MapGroup_Viridian      ;  3
 	dw MapGroup_Indigo        ;  4
 	assert_table_length NUM_MAP_GROUPS
 
@@ -47,7 +48,13 @@ MapGroup_NewBark:
 	map PlayersHouse2F, TILESET_PLAYERS_ROOM, INDOOR, LANDMARK_PALLET_TOWN, MUSIC_PALLET_TOWN, FALSE, PALETTE_DAY, FISHGROUP_SHORE
 	map BluesHouse, TILESET_HOUSE, INDOOR, LANDMARK_PALLET_TOWN, MUSIC_PALLET_TOWN, FALSE, PALETTE_DAY, FISHGROUP_SHORE
 	map OaksLab, TILESET_LAB, INDOOR, LANDMARK_PALLET_TOWN, MUSIC_POKEMON_TALK, FALSE, PALETTE_DAY, FISHGROUP_SHORE
+	map Route1, TILESET_KANTO, ROUTE, LANDMARK_ROUTE_1, MUSIC_ROUTE_1, FALSE, PALETTE_AUTO, FISHGROUP_SHORE
 	assert_table_length NUM_NEW_BARK_MAPS
+
+MapGroup_Viridian:
+	table_width MAP_LENGTH, MapGroup_Viridian
+	map ViridianCity, TILESET_KANTO, TOWN, LANDMARK_VIRIDIAN_CITY, MUSIC_VIRIDIAN_CITY, FALSE, PALETTE_AUTO, FISHGROUP_POND
+	assert_table_length NUM_VIRIDIAN_MAPS
 
 MapGroup_Indigo:
 	table_width MAP_LENGTH, MapGroup_Indigo

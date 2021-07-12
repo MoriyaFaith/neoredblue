@@ -22,6 +22,8 @@ INCLUDE "maps/PlayersHouse1F.asm"
 INCLUDE "maps/PlayersHouse2F.asm"
 INCLUDE "maps/BluesHouse.asm"
 INCLUDE "maps/OaksLab.asm"
+INCLUDE "maps/Route1.asm"
+INCLUDE "maps/ViridianCity.asm"
 
 
 SECTION "Map Scripts 4", ROMX

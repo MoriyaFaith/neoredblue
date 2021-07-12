@@ -32,6 +32,7 @@ RedsMom:
 	pause 60
 	special FadeInQuickly
 	special RestartMapMusic
+	opentext
 	writetext MomHealText2
 	waitbutton
 	closetext
