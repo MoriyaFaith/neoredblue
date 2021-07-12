@@ -50,13 +50,13 @@ INCLUDE "data/tilesets/players_room_collision.asm"
 
 SECTION "Tileset Data 2", ROMX
 
-TilesetPokecenterGFX::
+TilesetPokecenterGSCGFX::
 INCBIN "gfx/tilesets/pokecenter.2bpp.lz"
 
-TilesetPokecenterMeta::
+TilesetPokecenterGSCMeta::
 INCBIN "data/tilesets/pokecenter_metatiles.bin"
 
-TilesetPokecenterColl::
+TilesetPokecenterGSCColl::
 INCLUDE "data/tilesets/pokecenter_collision.asm"
 
 TilesetPortGFX::
@@ -337,3 +337,14 @@ INCBIN "data/tilesets/omanyte_word_room_metatiles.bin"
 
 TilesetAerodactylWordRoomMeta::
 INCBIN "data/tilesets/aerodactyl_word_room_metatiles.bin"
+
+SECTION "Tileset Data 9", ROMX
+
+TilesetPokecenterGFX::
+INCBIN "gfx/tilesets/pokecenter_gen1.2bpp.lz"
+
+TilesetPokecenterMeta::
+INCBIN "data/tilesets/pokecenter_gen1_metatiles.bin"
+
+TilesetPokecenterColl::
+INCLUDE "data/tilesets/pokecenter_gen1_collision.asm"

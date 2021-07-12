@@ -144,6 +144,7 @@ SECTION "New Songs", ROMX
 
 INCLUDE "audio/music/route25.asm"
 INCLUDE "audio/music/gymleaderbattle.asm"
+INCLUDE "audio/music/shop.asm"
 
 SECTION "Sound Effects", ROMX
 

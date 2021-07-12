@@ -61,6 +61,8 @@ ENDM
 
 	newgroup VIRIDIAN                                             ;  3
 	map_const VIRIDIAN_CITY,							   20, 18
+	map_const VIRIDIAN_POKECENTER,							7,  4
+	map_const VIRIDIAN_POKEMART,							4,  4
 	endgroup
 
 	newgroup INDIGO                                               ;  4

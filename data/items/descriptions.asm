@@ -281,7 +281,7 @@ PokeBallDesc:
 
 TownMapDesc:
 	db   "A map of the KANTO"
-	next "region."
+	next "region.@"
 
 BicycleDesc:
 	db   "A collapsible bike"
@@ -357,7 +357,7 @@ WaterStoneDesc:
 
 OaksParcelDesc:
 	db   "A parcel to be"
-	next "sent to PROF. OAK."
+	next "sent to PROF. OAK.@"
 
 HPUpDesc:
 	db   "Raises the HP of"

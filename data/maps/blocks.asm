@@ -49,6 +49,12 @@ Route1_Blocks:
 ViridianCity_Blocks:
 	INCBIN "maps/ViridianCity.blk"
 
+ViridianPokecenter_Blocks:
+	INCBIN "maps/KantoPokeCenter.blk"
+
+ViridianPokemart_Blocks:
+	INCBIN "maps/KantoPokeMart.blk"
+
 SECTION "Map Blocks 3", ROMX
 
 IndigoPlateauPokecenter1F_Blocks:

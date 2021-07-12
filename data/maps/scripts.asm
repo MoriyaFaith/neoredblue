@@ -24,7 +24,8 @@ INCLUDE "maps/BluesHouse.asm"
 INCLUDE "maps/OaksLab.asm"
 INCLUDE "maps/Route1.asm"
 INCLUDE "maps/ViridianCity.asm"
-
+INCLUDE "maps/ViridianPokecenter.asm"
+INCLUDE "maps/ViridianPokemart.asm"
 
 SECTION "Map Scripts 4", ROMX
 

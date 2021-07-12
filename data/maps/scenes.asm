@@ -18,6 +18,8 @@ MapScenes::
 	scene_var PLAYERS_HOUSE_1F,             wPlayersHouse1FSceneID
 	scene_var NEW_BARK_TOWN,				wPalletTownSceneID
 	scene_var OAKS_LAB,						wOaksLabSceneID
+	scene_var VIRIDIAN_CITY,				wViridianCitySceneID
+	scene_var VIRIDIAN_POKEMART,			wViridianCitySceneID
 
 	scene_var INDIGO_PLATEAU_POKECENTER_1F, wIndigoPlateauPokecenter1FSceneID
 	scene_var WILLS_ROOM,                   wWillsRoomSceneID

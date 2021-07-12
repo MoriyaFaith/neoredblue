@@ -122,6 +122,9 @@ ENDM
 	map_attributes BluesHouse, BLUES_HOUSE, $00, 0
 	map_attributes OaksLab, OAKS_LAB, $00, 0
 
+	map_attributes ViridianPokecenter, VIRIDIAN_POKECENTER, $00, 0
+	map_attributes ViridianPokemart, VIRIDIAN_POKEMART, $00, 0
+
 	map_attributes IndigoPlateauPokecenter1F, INDIGO_PLATEAU_POKECENTER_1F, $00, 0
 	map_attributes WillsRoom, WILLS_ROOM, $00, 0
 	map_attributes KogasRoom, KOGAS_ROOM, $00, 0

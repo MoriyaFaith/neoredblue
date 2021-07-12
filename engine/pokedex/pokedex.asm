@@ -1202,8 +1202,8 @@ Pokedex_DrawOptionScreenBG:
 	db $3b, " OPTION ", $3c, -1
 
 .Modes:
-	db   "NEW #DEX MODE"
-	next "OLD #DEX MODE"
+	db   "KANTO #DEX"
+	next "NATIONAL #DEX"
 	next "A to Z MODE"
 	db   "@"
 
@@ -1731,12 +1731,12 @@ Pokedex_DisplayModeDescription:
 	dw .UnownMode
 
 .NewMode:
-	db   "<PK><MN> are listed by"
-	next "evolution type.@"
+	db   "<PK><MN> that are"
+	next "native to KANTO.@"
 
 .OldMode:
 	db   "<PK><MN> are listed by"
-	next "official type.@"
+	next "order of discovery.@"
 
 .ABCMode:
 	db   "<PK><MN> are listed"

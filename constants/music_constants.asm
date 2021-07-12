@@ -108,6 +108,7 @@
 ; new to Neo RB
 	const MUSIC_ROUTE_25
 	const MUSIC_GYM_LEADER_BATTLE
+	const MUSIC_POKEMART
 NUM_MUSIC_SONGS EQU const_value
 
 ; GetMapMusic picks music for this value (see home/map.asm)

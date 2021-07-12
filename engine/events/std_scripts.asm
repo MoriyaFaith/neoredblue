@@ -117,7 +117,7 @@ PokecenterNurseScript:
 	pause 10
 	special HealParty
 	playmusic MUSIC_NONE
-	setval HEALMACHINE_POKECENTER
+	setval HEALMACHINE_ELMS_LAB
 	special HealMachineAnim
 	pause 30
 	special RestartMapMusic
@@ -481,7 +481,7 @@ BugContestResults_CopyContestantsToResults:
 
 InitializeEventsScript:
 	setevent EVENT_OAKSLAB_OAK
-	setevent EVENT_EARLS_ACADEMY_EARL
+	setevent EVENT_VIRIDIAN_CITY_GAMBLER
 	setevent EVENT_RADIO_TOWER_ROCKET_TAKEOVER
 	setevent EVENT_GOLDENROD_CITY_ROCKET_TAKEOVER
 	setevent EVENT_RADIO_TOWER_CIVILIANS_AFTER
@@ -495,7 +495,6 @@ InitializeEventsScript:
 	setevent EVENT_RIVAL_TEAM_ROCKET_BASE
 	setevent EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
 	setevent EVENT_USED_THE_CARD_KEY_IN_THE_RADIO_TOWER
-	setevent EVENT_RIVAL_AZALEA_TOWN
 	setevent EVENT_RIVAL_GOLDENROD_UNDERGROUND
 	setevent EVENT_AZALEA_TOWN_SLOWPOKES
 	setevent EVENT_KURTS_HOUSE_SLOWPOKE

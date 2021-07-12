@@ -636,7 +636,7 @@ OakSpeech:
 	call RotateFourPalettesLeft
 	call ClearTilemap
 
-	ld de, MUSIC_ROUTE_30
+	ld de, MUSIC_ROUTE_25
 	call PlayMusic
 
 	call RotateFourPalettesRight
@@ -748,7 +748,7 @@ OakText1:
 OakText2:
 	text_far _OakText2
 	text_asm
-	ld a, NIDORINA
+	ld a, NIDORINO
 	call PlayMonCry
 	call WaitSFX
 	ld hl, OakText3

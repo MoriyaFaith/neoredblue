@@ -45,6 +45,7 @@ NewBarkGroupSprites:
 	db SPRITE_SWIMMER_GUY
 	; max 9 of 9 walking sprites
 	db SPRITE_POKE_BALL
+	db SPRITE_KURT_ASLEEP
 	db 0 ; end
 
 IndigoGroupSprites:

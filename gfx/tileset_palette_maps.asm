@@ -25,7 +25,7 @@ TilesetPlayersHousePalMap:
 INCLUDE "gfx/tilesets/players_house_palette_map.asm"
 
 TilesetPokecenterPalMap:
-INCLUDE "gfx/tilesets/pokecenter_palette_map.asm"
+INCLUDE "gfx/tilesets/pokecenter_gen1_palette_map.asm"
 
 TilesetGatePalMap:
 INCLUDE "gfx/tilesets/gate_palette_map.asm"
@@ -107,6 +107,9 @@ INCLUDE "gfx/tilesets/battle_tower_inside_palette_map.asm"
 
 TilesetBattleTowerOutsidePalMap:
 INCLUDE "gfx/tilesets/battle_tower_outside_palette_map.asm"
+
+TilesetPokecenterGSCPalMap:
+INCLUDE "gfx/tilesets/pokecenter_palette_map.asm"
 
 MapGroupPalettes: ; unreferenced
 ; entries correspond to MAPGROUP_* constants

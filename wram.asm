@@ -2914,8 +2914,10 @@ wLancesRoomSceneID::                db
 wHallOfFameSceneID::                db
 wPalletTownSceneID::                db
 wOaksLabSceneID::                   db
+wViridianCitySceneID::              db
+wViridianMartSceneID::              db
 
-	ds 111
+	ds 107
 
 ; fight counts
 wJackFightCount::    db

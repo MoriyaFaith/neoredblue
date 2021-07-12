@@ -9,21 +9,17 @@
 
 ViridianCity_MapScripts:
 	def_scene_scripts
+	scene_script .DummyScript
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
-	callback MAPCALLBACK_OBJECTS, .CheckDex
 
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_VIRIDIAN
 	endcallback
 
-.CheckDex:
-	checkevent EVENT_GOT_POKEDEX_FROM_OAK
-	iftrue .skip
-	disappear VIRIDIANCITY_KURT
-.skip
-	endcallback
+.DummyScript
+	end
 
 ViridianCityTM42Script:
 	faceplayer
@@ -71,6 +67,34 @@ ViridianCityTeacherScript:
 	writetext ViridianCityNoCoffeeText
 	waitbutton
 	closetext
+
+NoCoffeeScript:
+	checkevent EVENT_GOT_POKEDEX_FROM_OAK
+	iftrue .skip
+	opentext 
+	writetext ViridianCityPrivatePropertyText
+	waitbutton
+	closetext
+	applymovement PLAYER, .WalkDown
+.skip
+	end
+
+.WalkDown
+	step DOWN
+	step_end
+
+LeaveGymScript:
+	opentext 
+	writetext ViridianCityLockedDoorsText
+	waitbutton
+	closetext
+	applymovement PLAYER, .WalkDown
+.skip
+	end
+
+.WalkDown
+	step DOWN
+	step_end
 
 ViridianCityLeaderScript:
 	jumptextfaceplayer ViridianCityWhoLeaderText
@@ -280,8 +304,12 @@ ViridianCity_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
+	warp_event 23, 25, VIRIDIAN_POKECENTER, 1
+	warp_event 29, 19, VIRIDIAN_POKEMART, 1
 
 	def_coord_events
+	coord_event 19,  9, SCENE_DEFAULT, NoCoffeeScript
+	coord_event 32,  8, SCENE_DEFAULT, LeaveGymScript
 
 	def_bg_events
 	bg_event 19,  1, BGEVENT_READ, ViridianCityTrainerTips1
@@ -296,6 +324,6 @@ ViridianCity_MapEvents:
 	object_event 13,  20, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityBallsScript, -1
 	object_event 30,  25, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityBugsScript, -1
 	object_event 17,   9, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityTeacherScript, -1
-	object_event 18,   9, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityNoCovfefeScript, EVENT_GOT_POKEDEX_FROM_OAK
-	object_event 17,   5, SPRITE_KURT, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityCatchTutorialScript, -1
+	object_event 18,   9, SPRITE_KURT_ASLEEP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityNoCovfefeScript, EVENT_GOT_POKEDEX_FROM_OAK
+	object_event 17,   5, SPRITE_KURT, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityCatchTutorialScript, EVENT_VIRIDIAN_CITY_GAMBLER
 	object_event 31,   8, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityLeaderScript, -1

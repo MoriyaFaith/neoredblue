@@ -109,4 +109,5 @@ Music:
 	dba Music_MobileCenter
 	dba Music_Route25
 	dba Music_GymLeaderBattle
+	dba Music_Shop
 	assert_table_length NUM_MUSIC_SONGS
