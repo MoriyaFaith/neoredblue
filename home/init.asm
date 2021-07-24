@@ -133,6 +133,8 @@ Init::
 	ld a, CONNECTION_NOT_ESTABLISHED
 	ldh [hSerialConnectionStatus], a
 
+	farcall InitSGBBorder
+
 	farcall InitCGBPals
 
 	ld a, HIGH(vBGMap1)

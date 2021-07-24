@@ -242,6 +242,9 @@ INCLUDE "gfx/overworld/heal_machine.pal"
 	cp HEALMACHINE_ELMS_LAB
 	jr z, .okay
 	bcpixel 0, 0
+	cp HEALMACHINE_HALL_OF_FAME
+	jr z, .okay
+	bcpixel 2, 0
 
 .okay
 	ld a, [de]

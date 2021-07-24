@@ -89,25 +89,22 @@ Rival1Group:
 	db  5, SQUIRTLE
 	db -1 ; end
 
-	; RIVAL1 (4)
+	; RIVAL1 (4 - Route 22 Optional)
 	db "?@", TRAINERTYPE_NORMAL
-	db 12, GASTLY
-	db 14, ZUBAT
-	db 16, BAYLEEF
+	db  9, PIDGEY
+	db  8, BULBASAUR
 	db -1 ; end
 
-	; RIVAL1 (5)
+	; RIVAL1 (5 - Route 22 Optional)
 	db "?@", TRAINERTYPE_NORMAL
-	db 12, GASTLY
-	db 14, ZUBAT
-	db 16, QUILAVA
+	db  9, PIDGEY
+	db  8, CHARMANDER
 	db -1 ; end
 
-	; RIVAL1 (6)
+	; RIVAL1 (6 - Route 22 Optional)
 	db "?@", TRAINERTYPE_NORMAL
-	db 12, GASTLY
-	db 14, ZUBAT
-	db 16, CROCONAW
+	db  9, PIDGEY
+	db  8, SQUIRTLE
 	db -1 ; end
 
 	; RIVAL1 (7)

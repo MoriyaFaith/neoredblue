@@ -147,7 +147,7 @@ Oak:
 	writetext OaksLabBlueLeaveItToMeText
 	waitbutton
 	closetext
-	playmusic MUSIC_RIVAL_ENCOUNTER
+	playmusic MUSIC_RIVAL_AFTER
 	turnobject PLAYER, DOWN
 	applymovement OAKSLAB_BLUE, OaksLabBlueWalksDown6
 	disappear OAKSLAB_BLUE
@@ -170,7 +170,9 @@ Oak:
 	waitbutton
 	closetext
 	setevent EVENT_GOT_POKEDEX_FROM_OAK
+	setmapscene ROUTE_22, SCENE_ROUTE22_RIVAL1
 	setflag ENGINE_POKEDEX
+	clearevent EVENT_VIRIDIAN_CITY_GAMBLER
 	end
 .right
 	setevent EVENT_TEMPORARY_UNTIL_MAP_RELOAD_1
@@ -816,7 +818,7 @@ OaksLabPokedexText::
 	line "digial encyclo-"
 	cont "pedia."
 
-	line "However, the pages"
+	para "However, the pages"
 	cont "seem to be blank."
 	done
 

@@ -833,7 +833,7 @@ _PushSGBPals:
 	jr nz, .loop
 	ret
 
-InitSGBBorder:
+InitSGBBorder::
 	call CheckCGB
 	ret nz
 

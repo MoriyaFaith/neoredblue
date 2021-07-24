@@ -46,6 +46,9 @@ OaksLab_Blocks:
 Route1_Blocks:
 	INCBIN "maps/Route1.blk"
 
+Route22_Blocks:
+	INCBIN "maps/Route22.blk"
+
 ViridianCity_Blocks:
 	INCBIN "maps/ViridianCity.blk"
 

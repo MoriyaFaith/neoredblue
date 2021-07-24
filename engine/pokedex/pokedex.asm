@@ -1626,17 +1626,15 @@ Pokedex_OrderMonsByMode:
 	dw Pokedex_ABCMode
 
 .NewMode:
-	ld de, NewPokedexOrder
+	ld de, NewPokedexOrder	
 	ld hl, wPokedexOrder
-	ld c, NUM_POKEMON
 .loopnew
 	ld a, [de]
 	inc de
+	and a
+	jp z, .FindLastSeen
 	ld [hli], a
-	dec c
-	jr nz, .loopnew
-	call .FindLastSeen
-	ret
+	jr .loopnew
 
 .OldMode:
 	ld hl, wPokedexOrder
@@ -1735,8 +1733,8 @@ Pokedex_DisplayModeDescription:
 	next "native to KANTO.@"
 
 .OldMode:
-	db   "<PK><MN> are listed by"
-	next "order of discovery.@"
+	db   "All currently"
+	next "known #MON.@"
 
 .ABCMode:
 	db   "<PK><MN> are listed"

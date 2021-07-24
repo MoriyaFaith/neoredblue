@@ -1,7 +1,6 @@
 ; Every Pokémon sorted in New Pokédex Order.
 
 NewPokedexOrder:
-	table_width 1, NewPokedexOrder
 	db BULBASAUR  ; 01
 	db IVYSAUR    ; 02
 	db VENUSAUR   ; 03
@@ -170,88 +169,4 @@ NewPokedexOrder:
 	db DRAGONITE  ; 95
 	db MEWTWO     ; 96
 	db MEW        ; 97
-; Not in the POKEDEX
-	db CHIKORITA  ; 98
-	db BAYLEEF    ; 99
-	db MEGANIUM   ; 9a
-	db CYNDAQUIL  ; 9b
-	db QUILAVA    ; 9c
-	db TYPHLOSION ; 9d
-	db TOTODILE   ; 9e
-	db CROCONAW   ; 9f
-	db FERALIGATR ; a0
-	db SENTRET    ; a1
-	db FURRET     ; a2
-	db HOOTHOOT   ; a3
-	db NOCTOWL    ; a4
-	db LEDYBA     ; a5
-	db LEDIAN     ; a6
-	db SPINARAK   ; a7
-	db ARIADOS    ; a8
-	db CHINCHOU   ; aa
-	db LANTURN    ; ab
-	db TOGEPI     ; af
-	db TOGETIC    ; b0
-	db NATU       ; b1
-	db XATU       ; b2
-	db MAREEP     ; b3
-	db FLAAFFY    ; b4
-	db AMPHAROS   ; b5
-	db MARILL     ; b7
-	db AZUMARILL  ; b8
-	db SUDOWOODO  ; b9
-	db HOPPIP     ; bb
-	db SKIPLOOM   ; bc
-	db JUMPLUFF   ; bd
-	db AIPOM      ; be
-	db SUNKERN    ; bf
-	db SUNFLORA   ; c0
-	db YANMA      ; c1
-	db WOOPER     ; c2
-	db QUAGSIRE   ; c3
-	db ESPEON     ; c4
-	db UMBREON    ; c5
-	db MURKROW    ; c6
-	db MISDREAVUS ; c8
-	db UNOWN      ; c9
-	db WOBBUFFET  ; ca
-	db GIRAFARIG  ; cb
-	db PINECO     ; cc
-	db FORRETRESS ; cd
-	db DUNSPARCE  ; ce
-	db GLIGAR     ; cf
-	db SNUBBULL   ; d1
-	db GRANBULL   ; d2
-	db QWILFISH   ; d3
-	db SHUCKLE    ; d5
-	db HERACROSS  ; d6
-	db SNEASEL    ; d7
-	db TEDDIURSA  ; d8
-	db URSARING   ; d9
-	db SLUGMA     ; da
-	db MAGCARGO   ; db
-	db SWINUB     ; dc
-	db PILOSWINE  ; dd
-	db CORSOLA    ; de
-	db REMORAID   ; df
-	db OCTILLERY  ; e0
-	db DELIBIRD   ; e1
-	db MANTINE    ; e2
-	db SKARMORY   ; e3
-	db HOUNDOUR   ; e4
-	db HOUNDOOM   ; e5
-	db PHANPY     ; e7
-	db DONPHAN    ; e8
-	db STANTLER   ; ea
-	db SMEARGLE   ; eb
-	db MILTANK    ; f1
-	db RAIKOU     ; f3
-	db ENTEI      ; f4
-	db SUICUNE    ; f5
-	db LARVITAR   ; f6
-	db PUPITAR    ; f7
-	db TYRANITAR  ; f8
-	db LUGIA      ; f9
-	db HO_OH      ; fa
-	db CELEBI     ; fb
-	assert_table_length NUM_POKEMON -100
+	db 0		  ; End of Pokedex

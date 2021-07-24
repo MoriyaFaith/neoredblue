@@ -2916,8 +2916,9 @@ wPalletTownSceneID::                db
 wOaksLabSceneID::                   db
 wViridianCitySceneID::              db
 wViridianMartSceneID::              db
+wRoute22SceneID::					db
 
-	ds 107
+	ds 106
 
 ; fight counts
 wJackFightCount::    db
