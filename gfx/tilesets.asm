@@ -217,15 +217,6 @@ INCBIN "data/tilesets/battle_tower_inside_metatiles.bin"
 TilesetBattleTowerInsideColl::
 INCLUDE "data/tilesets/battle_tower_inside_collision.asm"
 
-TilesetGateGFX::
-INCBIN "gfx/tilesets/gate.2bpp.lz"
-
-TilesetGateMeta::
-INCBIN "data/tilesets/gate_metatiles.bin"
-
-TilesetGateColl::
-INCLUDE "data/tilesets/gate_collision.asm"
-
 TilesetJohtoModernGFX::
 TilesetBattleTowerOutsideGFX::
 INCBIN "gfx/tilesets/johto_modern.2bpp.lz"
@@ -348,3 +339,21 @@ INCBIN "data/tilesets/pokecenter_gen1_metatiles.bin"
 
 TilesetPokecenterColl::
 INCLUDE "data/tilesets/pokecenter_gen1_collision.asm"
+
+TilesetKantoForestGFX::
+INCBIN "gfx/tilesets/kanto_forest.2bpp.lz"
+
+TilesetKantoForestMeta::
+INCBIN "data/tilesets/kanto_forest_metatiles.bin"
+
+TilesetKantoForestColl::
+INCLUDE "data/tilesets/kanto_forest_collision.asm"
+
+TilesetGateGFX::
+INCBIN "gfx/tilesets/gate.2bpp.lz"
+
+TilesetGateMeta::
+INCBIN "data/tilesets/gate_metatiles.bin"
+
+TilesetGateColl::
+INCLUDE "data/tilesets/gate_collision.asm"

@@ -9,6 +9,7 @@ OutdoorSprites:
 	dw NewBarkGroupSprites
 	dw ViridianGroupSprites
 	dw IndigoGroupSprites
+	dw DungeonGroupSprites
 	assert_table_length NUM_MAP_GROUPS
 
 CableClubGroupSprites:
@@ -48,5 +49,6 @@ NewBarkGroupSprites:
 	db SPRITE_KURT_ASLEEP
 	db 0 ; end
 
+DungeonGroupSprites:
 IndigoGroupSprites:
 	db 0 ;end

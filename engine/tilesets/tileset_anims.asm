@@ -51,6 +51,16 @@ TilesetKantoAnim:
 	dw NULL,  StandingTileFrame8
 	dw NULL,  DoneTileAnimation
 
+TilesetKantoForestAnim:
+	dw vTiles2 tile $14, ReadTileToAnimBuffer
+	dw wTileAnimBuffer, ScrollTileRight
+	dw wTileAnimBuffer, ScrollTileRight
+	dw wTileAnimBuffer, ScrollTileRight
+	dw vTiles2 tile $14, WriteTileFromAnimBuffer
+	dw NULL,  AnimateWaterPalette
+	dw NULL,  WaitTileAnimation
+	dw NULL,  DoneTileAnimation
+
 TilesetParkAnim:
 	dw vTiles2 tile $14, AnimateWaterTile
 	dw NULL,  WaitTileAnimation

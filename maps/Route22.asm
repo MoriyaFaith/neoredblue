@@ -21,7 +21,7 @@ Route22Rival1:
     iffalse .skip
     applymovement ROUTE22_BLUE, Route22RivalApproachTop
     turnobject ROUTE22_BLUE, UP
-    clearevent OAKSLAB_BLUE
+    clearevent EVENT_RIVAL_OAKSLAB
 .skip
     opentext
     writetext Route22RivalBeforeBattleText1
@@ -34,7 +34,7 @@ Route22Rival1:
 	loadtrainer RIVAL1, RIVAL1_2_SQUIRTLE
 	startbattle
 	dontrestartmapmusic
-	reloadmap
+	reloadmapafterbattle
 	sjump .AfterBattle
 
 .Squirtle
@@ -43,7 +43,7 @@ Route22Rival1:
 	loadtrainer RIVAL1, RIVAL1_2_BULBASAUR
 	startbattle
 	dontrestartmapmusic
-	reloadmap
+	reloadmapafterbattle
 	sjump .AfterBattle
 
 .Bulbasaur
@@ -52,7 +52,7 @@ Route22Rival1:
 	loadtrainer RIVAL1, RIVAL1_2_CHARMANDER
 	startbattle
 	dontrestartmapmusic
-	reloadmap
+	reloadmapafterbattle
 	sjump .AfterBattle
 
 .AfterBattle
@@ -61,8 +61,8 @@ Route22Rival1:
     writetext Route22RivalAfterBattleText1
     waitbutton
     closetext
-    checkevent OAKSLAB_BLUE
-    iftrue .skip2
+    checkevent EVENT_RIVAL_OAKSLAB
+    iffalse .skip2
     applymovement ROUTE22_BLUE, Route22RivalWalkAround
     setevent OAKSLAB_BLUE
 .skip2
@@ -89,6 +89,7 @@ Route22RivalWalkAround:
     step_end
 
 Route22RivalLeave:
+    step RIGHT
     step RIGHT
     step RIGHT
     step RIGHT
@@ -132,7 +133,7 @@ Route22RivalDefeatedText1::
 	text "Awww!"
 	line "You just lucked"
 	cont "out!"
-	prompt
+	done
 
 Route22TRivalWinText1::
 	text "<RIVAL>: What?"
@@ -140,8 +141,8 @@ Route22TRivalWinText1::
 	cont "#MON?"
 
 	para "You should catch"
-	cont "some more too!"
-	prompt
+	line "some more too!"
+	done
 
 Route22RivalBeforeBattleText2::
 	text "<RIVAL>: What?"
@@ -182,7 +183,7 @@ Route22RivalDefeatedText2::
 
 	para "I was just"
 	line "careless!"
-	prompt
+	done
 
 Route22RivalWinText2::
 	text "<RIVAL>: Hahaha!"
@@ -193,7 +194,7 @@ Route22RivalWinText2::
 
 	para "Go train some"
 	line "more! You loser!"
-	prompt
+	done
 
 Route22FrontGateText::
 	text "#MON LEAGUE"

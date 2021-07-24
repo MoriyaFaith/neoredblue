@@ -21,3 +21,7 @@
 ; group 16 (Pokémon League)
 	RGB 21,21,21, 13,13,13 ; morn/day
 	RGB 11,11,19, 07,07,12 ; nite
+
+; group 24 (Dungeons)
+	RGB 15,31,31, 05,17,31 ; morn/day
+	RGB 03,08,16, 00,05,11 ; nite

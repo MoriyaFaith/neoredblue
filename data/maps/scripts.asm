@@ -23,10 +23,14 @@ INCLUDE "maps/PlayersHouse2F.asm"
 INCLUDE "maps/BluesHouse.asm"
 INCLUDE "maps/OaksLab.asm"
 INCLUDE "maps/Route1.asm"
+INCLUDE "maps/Route2.asm"
 INCLUDE "maps/Route22.asm"
 INCLUDE "maps/ViridianCity.asm"
 INCLUDE "maps/ViridianPokecenter.asm"
 INCLUDE "maps/ViridianPokemart.asm"
+INCLUDE "maps/ViridianForestSouthGate.asm"
+INCLUDE "maps/ViridianForestNorthGate.asm"
+INCLUDE "maps/Route2Gate.asm"
 
 SECTION "Map Scripts 4", ROMX
 
@@ -41,6 +45,7 @@ INCLUDE "maps/HallOfFame.asm"
 
 SECTION "Map Scripts 5", ROMX
 
+INCLUDE "maps/ViridianForest.asm"
 
 SECTION "Map Scripts 6", ROMX
 

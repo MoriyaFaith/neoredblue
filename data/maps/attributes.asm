@@ -98,7 +98,8 @@ ENDM
 	map_attributes NewBarkTown, NEW_BARK_TOWN, $0A, NORTH
 	connection north, Route1, ROUTE_1, 0
 
-	map_attributes ViridianCity, VIRIDIAN_CITY, $0A, SOUTH | WEST
+	map_attributes ViridianCity, VIRIDIAN_CITY, $0A, NORTH | SOUTH | WEST
+	connection north, Route2, ROUTE_2, 5
 	connection south, Route1, ROUTE_1, 5
 	connection west, Route22, ROUTE_22, 4
 
@@ -106,8 +107,11 @@ ENDM
 	connection north, ViridianCity, VIRIDIAN_CITY, -5
 	connection south, NewBarkTown, NEW_BARK_TOWN, 0
 
-	map_attributes Route22, ROUTE_22, $0A, EAST
+	map_attributes Route22, ROUTE_22, $2C, EAST
 	connection east, ViridianCity, VIRIDIAN_CITY, -4
+
+	map_attributes Route2, ROUTE_2, $0F, SOUTH
+	connection south, ViridianCity, VIRIDIAN_CITY, -5
 
 	map_attributes BattleTowerOutside, BATTLE_TOWER_OUTSIDE, $05, 0
 
@@ -128,6 +132,9 @@ ENDM
 
 	map_attributes ViridianPokecenter, VIRIDIAN_POKECENTER, $00, 0
 	map_attributes ViridianPokemart, VIRIDIAN_POKEMART, $00, 0
+	map_attributes ViridianForestSouthGate, VIRIDIAN_FOREST_SOUTH_GATE, $00, 0
+	map_attributes ViridianForestNorthGate, VIRIDIAN_FOREST_NORTH_GATE, $00, 0
+	map_attributes Route2Gate, ROUTE_2_GATE, $00, 0
 
 	map_attributes IndigoPlateauPokecenter1F, INDIGO_PLATEAU_POKECENTER_1F, $00, 0
 	map_attributes WillsRoom, WILLS_ROOM, $00, 0
@@ -136,3 +143,5 @@ ENDM
 	map_attributes KarensRoom, KARENS_ROOM, $00, 0
 	map_attributes LancesRoom, LANCES_ROOM, $00, 0
 	map_attributes HallOfFame, HALL_OF_FAME, $00, 0
+
+	map_attributes ViridianForest, VIRIDIAN_FOREST, $02, 0

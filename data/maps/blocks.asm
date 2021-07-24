@@ -46,6 +46,9 @@ OaksLab_Blocks:
 Route1_Blocks:
 	INCBIN "maps/Route1.blk"
 
+Route2_Blocks:
+	INCBIN "maps/Route2.blk"
+
 Route22_Blocks:
 	INCBIN "maps/Route22.blk"
 
@@ -57,6 +60,14 @@ ViridianPokecenter_Blocks:
 
 ViridianPokemart_Blocks:
 	INCBIN "maps/KantoPokeMart.blk"
+
+Route2Gate_Blocks:
+ViridianForestNorthGate_Blocks:
+ViridianForestSouthGate_Blocks:
+	INCBIN "maps/Route2Gate.blk"
+
+ViridianForest_Blocks:
+	INCBIN "maps/ViridianForest.blk"
 
 SECTION "Map Blocks 3", ROMX
 

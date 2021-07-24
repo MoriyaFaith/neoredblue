@@ -42,7 +42,7 @@ ENDM
 	map_const TIME_CAPSULE,                                 5,  4 ;  4
 	endgroup
 
-	newgroup BATTLE_TOWER                                         ;  2
+	newgroup BATTLE_TOWER                                         ;  3
 	map_const BATTLE_TOWER_OUTSIDE,                        10, 14 ;  1
 	map_const BATTLE_TOWER_1F,                              8,  5 ;  2
 	map_const BATTLE_TOWER_ELEVATOR,                        2,  2 ;  3
@@ -50,7 +50,7 @@ ENDM
 	map_const BATTLE_TOWER_BATTLE_ROOM,                     4,  4 ;  5
 	endgroup
 
-	newgroup NEW_BARK                                             ;  3
+	newgroup NEW_BARK                                             ;  4
 	map_const NEW_BARK_TOWN,                               10,  9 ;  1
 	map_const PLAYERS_HOUSE_1F,                             4,  4 ;  2
 	map_const PLAYERS_HOUSE_2F,                             4,  4 ;  3
@@ -59,14 +59,18 @@ ENDM
 	map_const ROUTE_1,									   10, 18 ;  7
 	endgroup
 
-	newgroup VIRIDIAN                                             ;  3
+	newgroup VIRIDIAN                                             ;  5
 	map_const VIRIDIAN_CITY,							   20, 18
 	map_const VIRIDIAN_POKECENTER,							7,  4
 	map_const VIRIDIAN_POKEMART,							4,  4
 	map_const ROUTE_22,									   20,  9
+	map_const ROUTE_2,									   10, 36
+	map_const VIRIDIAN_FOREST_SOUTH_GATE,			        5,  4
+	map_const VIRIDIAN_FOREST_NORTH_GATE,			        5,  4
+	map_const ROUTE_2_GATE,							        5,  4
 	endgroup
 
-	newgroup INDIGO                                               ;  4
+	newgroup INDIGO                                               ;  6
 	map_const INDIGO_PLATEAU_POKECENTER_1F,                 9,  7 ;  1
 	map_const WILLS_ROOM,                                   5,  9 ;  2
 	map_const KOGAS_ROOM,                                   5,  9 ;  3
@@ -74,6 +78,11 @@ ENDM
 	map_const KARENS_ROOM,                                  5,  9 ;  5
 	map_const LANCES_ROOM,                                  5, 12 ;  6
 	map_const HALL_OF_FAME,                                 5,  7 ;  7
+	endgroup
+
+
+	newgroup DUNGEONS                                             ;  2
+	map_const VIRIDIAN_FOREST,							   17, 24 ;  1
 	endgroup
 
 NUM_MAP_GROUPS EQU const_value ; 4

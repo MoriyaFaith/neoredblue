@@ -90,8 +90,8 @@ INCLUDE "gfx/tilesets/lighthouse_palette_map.asm"
 TilesetPlayersRoomPalMap:
 INCLUDE "gfx/tilesets/players_room_palette_map.asm"
 
-UnusedMuseumPalMap: ; unreferenced
-INCLUDE "gfx/tilesets/unused_museum_palette_map.asm"
+UnusedGatePalMap: ; unreferenced
+INCLUDE "gfx/tilesets/gen2_gate_palette_map.asm"
 
 TilesetIcePathPalMap:
 INCLUDE "gfx/tilesets/ice_path_palette_map.asm"
@@ -110,6 +110,9 @@ INCLUDE "gfx/tilesets/battle_tower_outside_palette_map.asm"
 
 TilesetPokecenterGSCPalMap:
 INCLUDE "gfx/tilesets/pokecenter_palette_map.asm"
+
+TilesetKantoForestPalMap:
+INCLUDE "gfx/tilesets/kanto_forest_palette_map.asm"
 
 MapGroupPalettes: ; unreferenced
 ; entries correspond to MAPGROUP_* constants
