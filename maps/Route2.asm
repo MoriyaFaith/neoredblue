@@ -43,8 +43,8 @@ Route2_MapEvents:
 	def_coord_events
 
 	def_bg_events
-    bg_event  5, 65, BGEVENT_READ, Route2Sign
-    bg_event 11, 11, BGEVENT_READ, Route2DiglettsCaveSign
+	bg_event  5, 65, BGEVENT_READ, Route2Sign
+	bg_event 11, 11, BGEVENT_READ, Route2DiglettsCaveSign
 
 	def_object_events
 	object_event 13, 45, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route2HPUP, EVENT_ROUTE2_HP_UP

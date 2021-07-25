@@ -80,5 +80,5 @@ Route1_MapEvents:
 	bg_event  9, 27, BGEVENT_READ, Route1Sign
 
 	def_object_events
-    object_event  5, 24, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route1ViridianMartSampleScript, -1
+    object_event  5, 24, SPRITE_CLERK, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route1ViridianMartSampleScript, -1
     object_event 15, 13, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route1YoungsterScript, -1

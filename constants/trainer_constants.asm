@@ -328,9 +328,9 @@ NUM_NONTRAINER_PHONECONTACTS EQU const_value - 1
 	const SABRINA1
 
 	trainerclass BUG_CATCHER ; 24
-	const DON
-	const ROB
-	const ED
+	const RICK
+	const DOUG
+	const SAMMY
 	const WADE1
 	const BUG_CATCHER_BENNY
 	const AL
@@ -339,7 +339,7 @@ NUM_NONTRAINER_PHONECONTACTS EQU const_value - 1
 	const KEN
 	const WADE2
 	const WADE3
-	const DOUG
+	const DOUG2
 	const ARNIE2
 	const ARNIE3
 	const WADE4
@@ -391,7 +391,7 @@ NUM_NONTRAINER_PHONECONTACTS EQU const_value - 1
 	const TONY
 	const JEROME
 	const TUCKER
-	const RICK
+	const RICKA
 	const CAMERON
 	const SETH
 	const JAMES

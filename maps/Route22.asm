@@ -207,11 +207,11 @@ Route22_MapEvents:
 	def_warp_events
 
 	def_coord_events
-    coord_event 29,  4, SCENE_ROUTE22_RIVAL1, Route22Rival1_Top
-    coord_event 29,  5, SCENE_ROUTE22_RIVAL1, Route22Rival1
+	coord_event 29,  4, SCENE_ROUTE22_RIVAL1, Route22Rival1_Top
+	coord_event 29,  5, SCENE_ROUTE22_RIVAL1, Route22Rival1
 
 	def_bg_events
 	bg_event  7, 11, BGEVENT_READ, Route22FrontGate
 
 	def_object_events
-    object_event 25, 5, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_ROUTE_22
+	object_event 25, 5, SPRITE_BLUE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_ROUTE_22
