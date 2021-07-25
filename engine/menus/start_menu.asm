@@ -188,7 +188,7 @@ StartMenu::
 
 .PokedexString:  db "#DEX@"
 .PartyString:    db "#MON@"
-.PackString:     db "PACK@"
+.PackString:     db "BAG@"
 .StatusString:   db "<PLAYER>@"
 .SaveString:     db "SAVE@"
 .OptionString:   db "OPTION@"
@@ -206,15 +206,15 @@ StartMenu::
 
 .PackDesc:
 	db   "Contains"
-	next "items@"
+	next "your items@"
 
 .PokegearDesc:
-	db   "Trainer's"
+	db   "A Trainer's"
 	next "key device@"
 
 .StatusDesc:
-	db   "Your own"
-	next "status@"
+	db   "Money and"
+	next "BADGES@"
 
 .SaveDesc:
 	db   "Save your"
@@ -226,7 +226,7 @@ StartMenu::
 
 .ExitDesc:
 	db   "Close this"
-	next "menu@"
+	next "MENU@"
 
 .QuitDesc:
 	db   "Quit and"
