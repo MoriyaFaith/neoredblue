@@ -51,11 +51,13 @@ ViridianCityBugsScript:
 	writetext ViridianCityPoisonStingText
 	waitbutton
 	closetext
+	end
 
 .Okay
 	writetext ViridianCityOkText
 	waitbutton
 	closetext
+	end
 
 ViridianCityTeacherScript:
 	faceplayer
@@ -65,11 +67,13 @@ ViridianCityTeacherScript:
 	writetext ViridianCityForestText
 	waitbutton
 	closetext
+	end
 
 .NoCovfefe
 	writetext ViridianCityNoCoffeeText
 	waitbutton
 	closetext
+	end
 
 NoCoffeeScript:
 	checkevent EVENT_GOT_POKEDEX_FROM_OAK
