@@ -110,7 +110,12 @@ ViridianCityNoCovfefeScript:
 	jumptext ViridianCityPrivatePropertyText
 
 ViridianCityCatchTutorialScript:
-	jumptextfaceplayer ViridianCityOldManCoffeeText
+	faceplayer
+	opentext
+	special NameRater
+	waitbutton
+	closetext
+	end
 
 ViridianCityTrainerTips1:
 	jumptext ViridianCityTrainerTips1Text

@@ -251,7 +251,7 @@ TM01 EQU const_value
 	add_tm SHADOW_BALL  ; de
 	add_tm MUD_SLAP     ; df
 	add_tm DOUBLE_TEAM  ; e0
-	add_tm ICE_PUNCH    ; e1
+	add_tm ICE_BEAM     ; e1
 	add_tm SWAGGER      ; e2
 	add_tm SLEEP_TALK   ; e3
 	add_tm SLUDGE_BOMB  ; e4
@@ -259,14 +259,14 @@ TM01 EQU const_value
 	add_tm FIRE_BLAST   ; e6
 	add_tm SWIFT        ; e7
 	add_tm DEFENSE_CURL ; e8
-	add_tm THUNDERPUNCH ; e9
+	add_tm THUNDERBOLT  ; e9
 	add_tm DREAM_EATER  ; ea
 	add_tm DETECT       ; eb
 	add_tm REST         ; ec
 	add_tm ATTRACT      ; ed
 	add_tm THIEF        ; ee
 	add_tm STEEL_WING   ; ef
-	add_tm FIRE_PUNCH   ; f0
+	add_tm FLAMETHROWER ; f0
 	add_tm FURY_CUTTER  ; f1
 	add_tm NIGHTMARE    ; f2
 NUM_TMS EQU __tmhm_value__ - 1
@@ -302,9 +302,9 @@ MT{02d:MT_VALUE}_MOVE = \1
 ENDM
 
 MT01 EQU const_value
-	add_mt FLAMETHROWER
-	add_mt THUNDERBOLT
-	add_mt ICE_BEAM
+	add_mt FIRE_PUNCH
+	add_mt THUNDERPUNCH
+	add_mt ICE_PUNCH
 NUM_TUTORS = __tmhm_value__ - NUM_TMS - NUM_HMS - 1
 
 NUM_TM_HM_TUTOR EQU NUM_TMS + NUM_HMS + NUM_TUTORS
