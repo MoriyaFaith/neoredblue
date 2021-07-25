@@ -84,6 +84,9 @@ EvolveAfterBattle_MasterLoop:
 	cp EVOLVE_LEVEL
 	jp z, .level
 
+	cp EVOLVE_LEVELITEM
+	jp z, .levelitem
+
 	cp EVOLVE_HAPPINESS
 	jr z, .happiness
 
@@ -113,7 +116,7 @@ EvolveAfterBattle_MasterLoop:
 	jp nz, .dont_evolve_2
 
 	inc hl
-	jr .proceed
+	jp .proceed
 
 .happiness
 	ld a, [wTempMonHappiness]
@@ -125,7 +128,7 @@ EvolveAfterBattle_MasterLoop:
 
 	ld a, [hli]
 	cp TR_ANYTIME
-	jr z, .proceed
+	jp z, .proceed
 	cp TR_MORNDAY
 	jr z, .happiness_daylight
 
@@ -179,6 +182,27 @@ EvolveAfterBattle_MasterLoop:
 	ld a, [wLinkMode]
 	and a
 	jp nz, .dont_evolve_3
+	jr .proceed
+
+.levelitem
+	call IsMonHoldingEverstone
+	jp z, .dont_evolve_2
+
+	ld a, [hli]
+	ld b, a
+	inc a
+	jr z, .proceed
+
+	ld a, [wLinkMode]
+	cp LINK_TIMECAPSULE
+	jp z, .dont_evolve_3
+
+	ld a, [wTempMonItem]
+	cp b
+	jp nz, .dont_evolve_3
+
+	xor a
+	ld [wTempMonItem], a
 	jr .proceed
 
 .level
@@ -296,6 +320,7 @@ EvolveAfterBattle_MasterLoop:
 	ld [wTempSpecies], a
 	xor a
 	ld [wMonType], a
+	call LearnEvolutionMove
 	call LearnLevelMoves
 	ld a, [wTempSpecies]
 	dec a
@@ -342,6 +367,46 @@ EvolveAfterBattle_MasterLoop:
 	ld a, [wMonTriedToEvolve]
 	and a
 	call nz, RestartMapMusic
+	ret
+
+LearnEvolutionMove:
+	ld a, [wTempSpecies]
+	ld [wCurPartySpecies], a
+	dec a
+	ld c, a
+	ld b, 0
+	ld hl, EvolutionMoves
+	add hl, bc
+	ld a, [hl]
+	and a
+	ret z
+
+	push hl
+	ld d, a
+	ld hl, wPartyMon1Moves
+	ld a, [wCurPartyMon]
+	ld bc, PARTYMON_STRUCT_LENGTH
+	call AddNTimes
+
+	ld b, NUM_MOVES
+.check_move
+	ld a, [hli]
+	cp d
+	jr z, .has_move
+	dec b
+	jr nz, .check_move
+
+	ld a, d
+	ld [wPutativeTMHMMove], a
+	ld [wNamedObjectIndex], a
+	call GetMoveName
+	call CopyName1
+	predef LearnMove
+	ld a, [wCurPartySpecies]
+	ld [wTempSpecies], a
+
+.has_move
+	pop hl
 	ret
 
 UpdateSpeciesNameIfNotNicknamed:
