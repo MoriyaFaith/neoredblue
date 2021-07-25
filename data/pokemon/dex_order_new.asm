@@ -153,6 +153,8 @@ NewPokedexOrder:
 	db VAPOREON   ; 86
 	db JOLTEON    ; 87
 	db FLAREON    ; 88
+	db ESPEON
+	db UMBREON
 	db PORYGON    ; 89
 	db PORYGON2   ; e9
 	db OMANYTE    ; 8a
