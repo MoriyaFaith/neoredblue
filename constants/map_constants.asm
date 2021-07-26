@@ -63,6 +63,8 @@ ENDM
 	map_const VIRIDIAN_CITY,							   20, 18
 	map_const VIRIDIAN_POKECENTER,							7,  4
 	map_const VIRIDIAN_POKEMART,							4,  4
+	map_const VIRIDIAN_SCHOOL_HOUSE,						4,  4
+	map_const VIRIDIAN_NICKNAME_HOUSE,						4,  4
 	map_const ROUTE_22,									   20,  9
 	map_const ROUTE_2,									   10, 36
 	map_const VIRIDIAN_FOREST_SOUTH_GATE,			        5,  4

@@ -37,6 +37,10 @@ PlayersHouse1F_Blocks:
 PlayersHouse2F_Blocks:
 	INCBIN "maps/PlayersHouse2F.blk"
 
+ViridianSchoolHouse_Blocks:
+	INCBIN "maps/TrainerHouse.blk"
+
+ViridianNicknameHouse_Blocks:
 BluesHouse_Blocks:
 	INCBIN "maps/House1.blk"
 

@@ -318,6 +318,8 @@ ViridianCity_MapEvents:
 	def_warp_events
 	warp_event 23, 25, VIRIDIAN_POKECENTER, 1
 	warp_event 29, 19, VIRIDIAN_POKEMART, 1
+	warp_event 21,  9, VIRIDIAN_NICKNAME_HOUSE, 1
+	warp_event 21, 15, VIRIDIAN_SCHOOL_HOUSE, 1
 
 	def_coord_events
 	coord_event 19,  9, SCENE_DEFAULT, NoCoffeeScript
@@ -338,5 +340,5 @@ ViridianCity_MapEvents:
 	object_event 30,  25, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityBugsScript, -1
 	object_event 17,   9, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityTeacherScript, -1
 	object_event 18,   9, SPRITE_KURT_ASLEEP, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityNoCovfefeScript, EVENT_GOT_POKEDEX_FROM_OAK
-	object_event 17,   5, SPRITE_KURT, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityCatchTutorialScript, EVENT_VIRIDIAN_CITY_GAMBLER
+	object_event 17,   5, SPRITE_SAGE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityCatchTutorialScript, EVENT_VIRIDIAN_CITY_GAMBLER
 	object_event 31,   8, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityLeaderScript, -1

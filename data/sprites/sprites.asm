@@ -110,4 +110,5 @@ OverworldSprites:
 	overworld_sprite KurtAsleepSpriteGFX, 4, STILL_SPRITE, PAL_OW_BROWN
 	overworld_sprite ChrisSurfSpriteGFX, 12, WALKING_SPRITE, PAL_OW_RED
 	overworld_sprite KrisSurfSpriteGFX, 12, WALKING_SPRITE, PAL_OW_GREEN
+	overworld_sprite ClipboardSpriteGFX, 4, STILL_SPRITE, PAL_OW_BLUE
 	assert_table_length NUM_OVERWORLD_SPRITES

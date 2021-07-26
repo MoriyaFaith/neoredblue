@@ -109,6 +109,7 @@ PlaceMapNameSign::
 	jr nz, .already_initialized
 	call InitMapNameFrame
 	call PlaceMapNameCenterAlign
+	call PlaceMapNameCenterAlign2
 	farcall HDMATransfer_OnlyTopFourRows
 .already_initialized
 	ld a, $80
@@ -144,6 +145,38 @@ PlaceMapNameCenterAlign:
 	ld a, [wCurLandmark]
 	ld e, a
 	farcall GetLandmarkName
+	call .GetNameLength
+	ld a, SCREEN_WIDTH
+	sub c
+	srl a
+	ld b, 0
+	ld c, a
+	hlcoord 0, 1
+	add hl, bc
+	ld de, wStringBuffer1
+	call PlaceString
+	ret
+
+.GetNameLength:
+	ld c, 0
+	push hl
+	ld hl, wStringBuffer1
+.loop
+	ld a, [hli]
+	cp "@"
+	jr z, .stop
+	cp "%"
+	jr z, .loop
+	inc c
+	jr .loop
+.stop
+	pop hl
+	ret
+
+PlaceMapNameCenterAlign2:
+	ld a, [wCurLandmark]
+	ld e, a
+	farcall GetLandmarkName2
 	call .GetNameLength
 	ld a, SCREEN_WIDTH
 	sub c

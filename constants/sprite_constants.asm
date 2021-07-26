@@ -105,11 +105,13 @@
 	const SPRITE_KURT_ASLEEP
 	const SPRITE_CHRIS_SURF
 	const SPRITE_KRIS_SURF
+	const SPRITE_CLIPBOARD
 NUM_OVERWORLD_SPRITES EQU const_value - 1
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)
 	const_next $80
 SPRITE_POKEMON EQU const_value
+	const SPRITE_SPEAROW
 	const SPRITE_UNOWN ; 80
 	const SPRITE_GEODUDE ; 81
 	const SPRITE_GROWLITHE ; 82

@@ -67,10 +67,16 @@ ViridianMartParcelQuestText::
 	cont "to him?"
     done
 
+ViridianMart2:
+	jumptextfaceplayer ViridianMartText2
+
 ViridianMartText2::
 	text "This shop sells"
 	line "many ANTIDOTEs."
 	done
+
+ViridianMart3:
+	jumptextfaceplayer ViridianMartText3
 
 ViridianMartText3::
 	text "The shop finally"
@@ -91,3 +97,5 @@ ViridianPokemart_MapEvents:
 
 	def_object_events
 	object_event  0,  5, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianPokemartClerkScript, -1
+	object_event  3,  3, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianMart3, -1
+	object_event  5,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianMart2, -1

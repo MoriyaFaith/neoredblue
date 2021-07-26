@@ -132,6 +132,8 @@ ENDM
 
 	map_attributes ViridianPokecenter, VIRIDIAN_POKECENTER, $00, 0
 	map_attributes ViridianPokemart, VIRIDIAN_POKEMART, $00, 0
+	map_attributes ViridianNicknameHouse, VIRIDIAN_NICKNAME_HOUSE, $00, 0
+	map_attributes ViridianSchoolHouse, VIRIDIAN_SCHOOL_HOUSE, $00, 0
 	map_attributes ViridianForestSouthGate, VIRIDIAN_FOREST_SOUTH_GATE, $00, 0
 	map_attributes ViridianForestNorthGate, VIRIDIAN_FOREST_NORTH_GATE, $00, 0
 	map_attributes Route2Gate, ROUTE_2_GATE, $00, 0

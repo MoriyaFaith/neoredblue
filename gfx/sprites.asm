@@ -110,3 +110,4 @@ SECTION "Sprites 3", ROMX
 
 ChrisSurfSpriteGFX::           INCBIN "gfx/sprites/chris_surf.2bpp"
 KrisSurfSpriteGFX::            INCBIN "gfx/sprites/kris_surf.2bpp"
+ClipboardSpriteGFX::           INCBIN "gfx/sprites/clipboard.2bpp"

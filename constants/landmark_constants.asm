@@ -85,15 +85,18 @@ KANTO_LANDMARK EQU const_value
 	const LANDMARK_ROUTE_17          ; 4f
 	const LANDMARK_ROUTE_18          ; 50
 	const LANDMARK_FUCHSIA_CITY      ; 51
+	const LANDMARK_SAFARI_ZONE
 	const LANDMARK_ROUTE_19          ; 52
 	const LANDMARK_ROUTE_20          ; 53
 	const LANDMARK_SEAFOAM_ISLANDS   ; 54
 	const LANDMARK_CINNABAR_ISLAND   ; 55
+	const LANDMARK_POKEMON_MANSION
 	const LANDMARK_ROUTE_21          ; 56
 	const LANDMARK_ROUTE_22          ; 57
 	const LANDMARK_VICTORY_ROAD      ; 58
 	const LANDMARK_ROUTE_23          ; 59
 	const LANDMARK_INDIGO_PLATEAU    ; 5a
+	const LANDMARK_CERULEAN_CAVE
 	const LANDMARK_ROUTE_26          ; 5b
 	const LANDMARK_ROUTE_27          ; 5c
 	const LANDMARK_TOHJO_FALLS       ; 5d
