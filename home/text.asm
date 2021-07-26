@@ -359,11 +359,11 @@ PlaceEnemysName::
 	jr z, .rival
 	cp RIVAL3
 	jr z, .rival
+	cp GIOVANNI
+	jr z, .checkleader
 
-	ld a, [wOtherTrainerID]
-	cp GIOVANNI_GYM
-	jr z, .leadergio
 
+.else
 	ld de, wOTClassName
 	call PlaceString
 	ld h, b
@@ -380,7 +380,10 @@ PlaceEnemysName::
 	ld de, wRivalName
 	jr PlaceCommandCharacter
 
-.leadergio
+.checkleader
+	ld a, [wOtherTrainerID]
+	cp GIOVANNI_GYM
+	jr nz, .else
 	ld de, .gioclassname
 	call PlaceString
 	ld h, b
