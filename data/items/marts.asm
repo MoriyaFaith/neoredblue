@@ -153,7 +153,6 @@ MartGoldenrod5F3:
 	db TM_THUNDERBOLT
 	db TM_FLAMETHROWER
 	db TM_ICE_BEAM
-	db TM_ROCK_SMASH
 	db -1 ; end
 
 MartGoldenrod5F4:
@@ -162,7 +161,6 @@ MartGoldenrod5F4:
 	db TM_FLAMETHROWER
 	db TM_ICE_BEAM
 	db TM_HEADBUTT
-	db TM_ROCK_SMASH
 	db -1 ; end
 
 MartOlivine:
