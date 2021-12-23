@@ -46,7 +46,7 @@ PlayersHouse1FBookshelf:
 
 MomWakeUpText::
 	text "MOM: Right."
-	line "All boys leave"
+	line "All kids leave"
 	cont "home some day."
 	cont "It said so on TV."
 
