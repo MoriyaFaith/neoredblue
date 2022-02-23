@@ -51,7 +51,7 @@ Music:
 	dba Music_VioletCity
 	dba Music_JohtoGymBattle
 	dba Music_ChampionBattle
-	dba Music_RivalBattle
+	dba Music_BlueBattle
 	dba Music_RocketBattle
 	dba Music_ElmsLab
 	dba Music_DarkCave
@@ -104,10 +104,11 @@ Music:
 	dba Music_LookMysticalMan
 	dba Music_CrystalOpening
 	dba Music_BattleTowerTheme
-	dba Music_SuicuneBattle
+	dba Music_DV_KantoLegendary
 	dba Music_BattleTowerLobby
 	dba Music_MobileCenter
 	dba Music_Route25
 	dba Music_GymLeaderBattle
 	dba Music_Shop
+	dba Music_GiovanniBattle
 	assert_table_length NUM_MUSIC_SONGS

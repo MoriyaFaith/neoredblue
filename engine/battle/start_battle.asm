@@ -104,7 +104,11 @@ PlayBattleMusic:
 	cp EXECUTIVEF
 	jr z, .done
 
-
+	ld de, MUSIC_RIVAL_BATTLE
+	cp RIVAL1
+	jr z, .done
+	cp RIVAL2
+	jr z, .done
 
 	ld de, MUSIC_GYM_LEADER_BATTLE
 	farcall IsKantoGymLeader
@@ -116,7 +120,7 @@ PlayBattleMusic:
 	farcall IsGymLeader
 	jr c, .done
 
-	ld de, MUSIC_ROCKET_BATTLE
+	ld de, MUSIC_GIOVANNI_BATTLE
 	ld a, [wOtherTrainerClass]
 	cp GIOVANNI
 	jr nz, .othertrainer
