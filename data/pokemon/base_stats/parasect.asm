@@ -1,8 +1,12 @@
 	db PARASECT ; 047
 
+if DEF(FAITHFUL)
 	db  60,  95,  80,  30,  60,  80
 	;   hp  atk  def  spd  sat  sdf
-
+else 
+	db  60,  95, 105,  30,  60, 105
+	;   hp  atk  def  spd  sat  sdf
+endc
 	db BUG, GRASS ; type
 	db 75 ; catch rate
 	db 128 ; base exp

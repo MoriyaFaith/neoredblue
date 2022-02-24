@@ -1,7 +1,13 @@
 	db TYPHLOSION ; 157
 
+if DEF(FAITHFUL)
 	db  78,  84,  78, 100, 109,  85
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  70, 120,  72, 110,  95,  60
+	;   hp  atk  def  spd  sat  sdf
+endc
+
 
 	db FIRE, FIRE ; type
 	db 45 ; catch rate

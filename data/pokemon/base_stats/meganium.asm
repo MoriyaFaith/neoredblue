@@ -1,7 +1,12 @@
 	db MEGANIUM ; 154
 
+if DEF(FAITHFUL)
 	db  80,  82, 100,  80,  83, 100
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  90,  72, 110,  70,  73, 110
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db GRASS, GRASS ; type
 	db 45 ; catch rate

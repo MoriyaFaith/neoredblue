@@ -1,7 +1,12 @@
 	db SPINARAK ; 167
 
+if DEF(FAITHFUL)
 	db  40,  60,  40,  30,  40,  40
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  40,  50,  30,  60,  30,  40
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db BUG, POISON ; type
 	db 255 ; catch rate

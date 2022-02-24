@@ -1,8 +1,12 @@
 	db PARAS ; 046
 
+if DEF(FAITHFUL)
 	db  35,  70,  55,  25,  45,  55
 	;   hp  atk  def  spd  sat  sdf
-
+else 
+	db  35,  70,  70,  25,  45,  70
+	;   hp  atk  def  spd  sat  sdf
+endc
 	db BUG, GRASS ; type
 	db 190 ; catch rate
 	db 70 ; base exp

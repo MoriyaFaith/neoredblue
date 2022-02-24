@@ -72,5 +72,6 @@
 	const CRY_AIPOM
 	const CRY_DUNSPARCE
 	const CRY_DONPHAN
+	const CRY_GLISCOR
 
 NUM_CRIES EQU const_value

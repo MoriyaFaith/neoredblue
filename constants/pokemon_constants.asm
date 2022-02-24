@@ -192,8 +192,8 @@ JOHTO_POKEMON EQU const_value
 	const CHINCHOU   ; aa
 	const LANTURN    ; ab
 	const PICHU      ; ac
-	const CLEFFA     ; ad
-	const IGGLYBUFF  ; ae
+	const HONCHKROW  ; ad
+	const MISMAGIUS  ; ae
 	const TOGEPI     ; af
 	const TOGETIC    ; b0
 	const NATU       ; b1
@@ -258,8 +258,8 @@ JOHTO_POKEMON EQU const_value
 	const TYROGUE    ; ec
 	const HITMONTOP  ; ed
 	const SMOOCHUM   ; ee
-	const ELEKID     ; ef
-	const MAGBY      ; f0
+	const WEAVILE    ; ef
+	const GLISCOR    ; f0
 	const MILTANK    ; f1
 	const BLISSEY    ; f2
 	const RAIKOU     ; f3

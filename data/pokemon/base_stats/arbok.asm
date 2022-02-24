@@ -1,9 +1,14 @@
 	db ARBOK ; 024
 
+if DEF(FAITHFUL)
 	db  60,  85,  69,  80,  65,  79
 	;   hp  atk  def  spd  sat  sdf
-
 	db POISON, POISON ; type
+else
+	db  70, 105,  69,  90,  65,  79
+	;   hp  atk  def  spd  sat  sdf
+	db POISON, DARK ; type
+endc
 	db 90 ; catch rate
 	db 147 ; base exp
 	db NO_ITEM, NO_ITEM ; items

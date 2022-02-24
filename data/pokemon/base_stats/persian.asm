@@ -1,8 +1,12 @@
 	db PERSIAN ; 053
 
+if DEF(FAITHFUL)
 	db  65,  70,  60, 115,  65,  65
 	;   hp  atk  def  spd  sat  sdf
-
+else
+	db  65,  85,  60, 115,  65,  65
+	;   hp  atk  def  spd  sat  sdf
+endc
 	db NORMAL, NORMAL ; type
 	db 90 ; catch rate
 	db 148 ; base exp

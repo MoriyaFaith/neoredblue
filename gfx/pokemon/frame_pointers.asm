@@ -1,5 +1,4 @@
 FramesPointers:
-	table_width 2, FramesPointers
 	dw BulbasaurFrames
 	dw IvysaurFrames
 	dw VenusaurFrames
@@ -172,8 +171,8 @@ FramesPointers:
 	dw ChinchouFrames
 	dw LanturnFrames
 	dw PichuFrames
-	dw CleffaFrames
-	dw IgglybuffFrames
+	dw HonchkrowFrames
+	dw MismagiusFrames
 	dw TogepiFrames
 	dw TogeticFrames
 	dw NatuFrames
@@ -238,8 +237,8 @@ FramesPointers:
 	dw TyrogueFrames
 	dw HitmontopFrames
 	dw SmoochumFrames
-	dw ElekidFrames
-	dw MagbyFrames
+	dw WeavileFrames
+	dw GliscorFrames
 	dw MiltankFrames
 	dw BlisseyFrames
 	dw RaikouFrames
@@ -251,4 +250,3 @@ FramesPointers:
 	dw LugiaFrames
 	dw HoOhFrames
 	dw CelebiFrames
-	assert_table_length NUM_POKEMON

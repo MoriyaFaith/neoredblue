@@ -36,13 +36,13 @@ INCBIN "gfx/font/font_inversed.1bpp"
 SECTION "Copyright", ROMX
 
 CopyrightGFX::
-INCBIN "gfx/splash/copyright.2bpp"
+INCBIN "gfx/splash_crystal/copyright.2bpp"
 
 
 SECTION "Intro Logo", ROMX
 
 GameFreakDittoGFX::
-INCBIN "gfx/splash/ditto.2bpp.lz"
+INCBIN "gfx/splash_crystal/ditto.2bpp.lz"
 
 
 SECTION "Unown Font", ROMX

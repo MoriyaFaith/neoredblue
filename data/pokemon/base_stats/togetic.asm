@@ -1,7 +1,12 @@
 	db TOGETIC ; 176
 
+if DEF(FAITHFUL)
 	db  55,  40,  85,  40,  80, 105
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  55,  60,  65, 110, 110,  65
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db NORMAL, FLYING ; type
 	db 75 ; catch rate

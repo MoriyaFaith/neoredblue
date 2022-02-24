@@ -174,8 +174,8 @@ IconPointers:
 	dw ChinchouIcon
 	dw LanturnIcon
 	dw PichuIcon
-	dw CleffaIcon
-	dw IgglybuffIcon
+	dw HonchkrowIcon
+	dw MismagiusIcon
 	dw TogepiIcon
 	dw TogeticIcon
 	dw NatuIcon
@@ -240,8 +240,8 @@ IconPointers:
 	dw TyrogueIcon
 	dw HitmontopIcon
 	dw SmoochumIcon
-	dw ElekidIcon
-	dw MagbyIcon
+	dw WeavileIcon
+	dw GliscorIcon
 	dw MiltankIcon
 	dw BlisseyIcon
 	dw RaikouIcon

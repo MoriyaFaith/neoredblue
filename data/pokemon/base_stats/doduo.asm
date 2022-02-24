@@ -1,7 +1,12 @@
 	db DODUO ; 084
 
+if DEF(FAITHFUL)
 	db  35,  85,  45,  75,  35,  35
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  45,  90,  50,  75,  35,  40
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db NORMAL, FLYING ; type
 	db 190 ; catch rate

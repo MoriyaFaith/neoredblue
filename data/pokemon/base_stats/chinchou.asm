@@ -1,7 +1,13 @@
 	db CHINCHOU ; 170
 
+if DEF(FAITHFUL)
 	db  75,  38,  38,  67,  56,  56
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  75,  38,  48,  67,  56,  66
+	;   hp  atk  def  spd  sat  sdf
+endc
+
 
 	db WATER, ELECTRIC ; type
 	db 190 ; catch rate

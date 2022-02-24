@@ -1,7 +1,12 @@
 	db SCYTHER ; 123
 
+if DEF(FAITHFUL)
 	db  70, 110,  80, 105,  55,  80
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  70, 110,  80, 125,  55,  60
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db BUG, FLYING ; type
 	db 45 ; catch rate

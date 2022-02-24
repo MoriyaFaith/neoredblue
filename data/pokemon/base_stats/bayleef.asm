@@ -1,7 +1,13 @@
 	db BAYLEEF ; 153
 
+if DEF(FAITHFUL)
 	db  60,  62,  80,  60,  63,  80
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  70,  52,  90,  50,  53,  90
+	;   hp  atk  def  spd  sat  sdf
+endc
+
 
 	db GRASS, GRASS ; type
 	db 45 ; catch rate

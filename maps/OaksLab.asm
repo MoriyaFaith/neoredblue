@@ -819,7 +819,7 @@ OaksLabPokedexText::
 	cont "pedia."
 
 	para "However, the pages"
-	cont "seem to be blank."
+	line "seem to be blank."
 	done
 
 OaksAssistant1Text::

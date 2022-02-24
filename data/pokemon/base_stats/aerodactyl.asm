@@ -3,7 +3,12 @@
 	db  80, 105,  65, 130,  60,  75
 	;   hp  atk  def  spd  sat  sdf
 
+if DEF(FAITHFUL)
 	db ROCK, FLYING ; type
+else
+	db ROCK, DRAGON ; type
+endc
+
 	db 45 ; catch rate
 	db 202 ; base exp
 	db NO_ITEM, NO_ITEM ; items

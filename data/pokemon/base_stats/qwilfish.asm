@@ -1,7 +1,12 @@
 	db QWILFISH ; 211
 
+if DEF(FAITHFUL)
 	db  65,  95,  75,  85,  55,  55
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  75, 110,  75, 110,  70,  60
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db WATER, POISON ; type
 	db 45 ; catch rate

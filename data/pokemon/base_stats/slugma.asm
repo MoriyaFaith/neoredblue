@@ -1,7 +1,12 @@
 	db SLUGMA ; 218
 
+if DEF(FAITHFUL)
 	db  40,  40,  40,  20,  70,  40
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  55,  40,  45,  20,  70,  55
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db FIRE, FIRE ; type
 	db 190 ; catch rate

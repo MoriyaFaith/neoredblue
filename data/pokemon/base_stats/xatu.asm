@@ -1,7 +1,12 @@
 	db XATU ; 178
 
+if DEF(FAITHFUL)
 	db  65,  75,  70,  95,  95,  70
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  65,  75,  70, 105, 105,  70
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db PSYCHIC_TYPE, FLYING ; type
 	db 75 ; catch rate

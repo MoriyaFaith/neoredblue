@@ -34,11 +34,11 @@ EggMovePointers::
 	dw NidoranMEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw NoEggMoves
+	dw ClefairyEggMoves
 	dw NoEggMoves
 	dw VulpixEggMoves
 	dw NoEggMoves
-	dw NoEggMoves
+	dw JigglypuffEggMoves
 	dw NoEggMoves
 	dw ZubatEggMoves
 	dw NoEggMoves
@@ -124,8 +124,8 @@ EggMovePointers::
 	dw MrMimeEggMoves
 	dw ScytherEggMoves
 	dw NoEggMoves
-	dw NoEggMoves
-	dw NoEggMoves
+	dw ElectabuzzEggMoves
+	dw MagmarEggMoves
 	dw PinsirEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
@@ -172,8 +172,8 @@ EggMovePointers::
 	dw ChinchouEggMoves
 	dw NoEggMoves
 	dw PichuEggMoves
-	dw CleffaEggMoves
-	dw IgglybuffEggMoves
+	dw NoEggMoves
+	dw NoEggMoves
 	dw TogepiEggMoves
 	dw NoEggMoves
 	dw NatuEggMoves
@@ -238,8 +238,8 @@ EggMovePointers::
 	dw TyrogueEggMoves
 	dw NoEggMoves
 	dw SmoochumEggMoves
-	dw ElekidEggMoves
-	dw MagbyEggMoves
+	dw NoEggMoves
+	dw NoEggMoves
 	dw MiltankEggMoves
 	dw NoEggMoves
 	dw NoEggMoves

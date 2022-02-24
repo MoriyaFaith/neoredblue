@@ -1,7 +1,12 @@
 	db SMEARGLE ; 235
 
+if DEF(FAITHFUL)
 	db  55,  20,  35,  75,  20,  45
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  80,  70,  60, 100,  70,  70
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db NORMAL, NORMAL ; type
 	db 45 ; catch rate

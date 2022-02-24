@@ -82,6 +82,84 @@ DrawHP:
 	pop de
 	ret
 
+DrawSummaryHP: ;duplicate of above, but for the summary screen
+	ld a, $1
+	ld [wWhichHPBar], a
+	push hl
+	push bc
+	; box mons have full HP
+	ld a, [wMonType]
+	cp BOXMON
+	jr z, .at_least_1_hp
+
+	ld a, [wTempMonHP]
+	ld b, a
+	ld a, [wTempMonHP + 1]
+	ld c, a
+
+; Any HP?
+	or b
+	jr nz, .at_least_1_hp
+
+	xor a
+	ld c, a
+	ld e, a
+	ld a, 6
+	ld d, a
+	jp .fainted
+
+.at_least_1_hp
+	ld a, [wTempMonMaxHP]
+	ld d, a
+	ld a, [wTempMonMaxHP + 1]
+	ld e, a
+	ld a, [wMonType]
+	cp BOXMON
+	jr nz, .not_boxmon
+
+	ld b, d
+	ld c, e
+
+.not_boxmon
+	predef ComputeSummaryHPBarPixels
+	ld a, 6
+	ld d, a
+	ld c, a
+
+.fainted
+	ld a, c
+	pop bc
+	ld c, a
+	pop hl
+	push de
+	push hl
+	push hl
+	call DrawBattleHPBar
+	pop hl
+
+; Print HP
+	bccoord 0, 1, 0
+	add hl, bc
+	ld de, wTempMonHP
+	ld a, [wMonType]
+	cp BOXMON
+	jr nz, .not_boxmon_2
+	ld de, wTempMonMaxHP
+.not_boxmon_2
+	lb bc, 2, 3
+	call PrintNum
+
+	ld a, "/"
+	ld [hli], a
+
+; Print max HP
+	ld de, wTempMonMaxHP
+	lb bc, 2, 3
+	call PrintNum
+	pop hl
+	pop de
+	ret
+
 PrintTempMonStats:
 ; Print wTempMon's stats at hl, with spacing bc.
 	push bc

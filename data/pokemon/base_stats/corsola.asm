@@ -1,7 +1,12 @@
 	db CORSOLA ; 222
 
+if DEF(FAITHFUL)
 	db  55,  55,  85,  35,  65,  85
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  85,  55, 115,  35,  75, 115
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db WATER, ROCK ; type
 	db 60 ; catch rate

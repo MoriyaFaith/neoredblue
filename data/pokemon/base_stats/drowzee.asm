@@ -3,7 +3,12 @@
 	db  60,  48,  45,  42,  43,  90
 	;   hp  atk  def  spd  sat  sdf
 
+if DEF(FAITHFUL)
 	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
+else
+	db PSYCHIC_TYPE, DARK ; type
+endc
+
 	db 190 ; catch rate
 	db 102 ; base exp
 	db NO_ITEM, NO_ITEM ; items

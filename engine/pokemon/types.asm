@@ -30,7 +30,7 @@ PrintMonTypes:
 	; Erase any type name that was here before.
 	; Seems to be pointless in localized versions.
 	ld a, " "
-	ld bc, SCREEN_WIDTH - 3
+	ld bc, SCREEN_WIDTH - 1
 	add hl, bc
 	ld [hl], a
 	inc bc

@@ -1,7 +1,12 @@
 	db CUBONE ; 104
 
+if DEF(FAITHFUL)
 	db  50,  50,  95,  35,  40,  50
 	;   hp  atk  def  spd  sat  sdf
+else	
+	db  55,  50, 100,  50,  50,  50
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db GROUND, GROUND ; type
 	db 190 ; catch rate

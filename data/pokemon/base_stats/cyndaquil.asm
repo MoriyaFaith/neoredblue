@@ -1,7 +1,12 @@
 	db CYNDAQUIL ; 155
 
+if DEF(FAITHFUL)
 	db  39,  52,  43,  65,  60,  50
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  39,  62,  40,  70,  50,  48
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db FIRE, FIRE ; type
 	db 45 ; catch rate

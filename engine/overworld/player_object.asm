@@ -36,7 +36,7 @@ SpawnPlayer:
 	ld a, [wPlayerGender]
 	bit PLAYERGENDER_FEMALE_F, a
 	jr z, .ok
-	ln e, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT
+	ln e, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT
 
 .ok
 	ld [hl], e
@@ -530,7 +530,7 @@ TrainerWalkToPlayer:
 	call DecrementMovementBufferCount
 
 .TerminateStep:
-	ld a, movement_step_end
+	ld a, movement_step_resume
 	call AppendToMovementBuffer
 	ret
 
@@ -582,7 +582,7 @@ SurfStartStep:
 	call InitMovementBuffer
 	call .GetMovementData
 	call AppendToMovementBuffer
-	ld a, movement_step_end
+	ld a, movement_step_resume
 	call AppendToMovementBuffer
 	ret
 

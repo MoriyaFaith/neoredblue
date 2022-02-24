@@ -1,4 +1,4 @@
-roms := neoredblue.gbc neoredblue11.gbc neoredblue_au.gbc neoredblue_debug.gbc neoredblue11_debug.gbc
+roms := neoredblue.gbc neoredblue_faithful.gbc neoredblue11.gbc neoredblue_au.gbc neoredblue_debug.gbc neoredblue11_debug.gbc
 
 rom_obj := \
 audio.o \
@@ -19,6 +19,7 @@ gfx/tilesets.o \
 lib/mobile/main.o
 
 neoredblue_obj         := $(rom_obj:.o=.o)
+neoredblue_faithful_obj           := $(rom_obj:.o=_faithful.o)
 neoredblue11_obj       := $(rom_obj:.o=11.o)
 neoredblue_au_obj      := $(rom_obj:.o=_au.o)
 neoredblue_debug_obj   := $(rom_obj:.o=_debug.o)
@@ -43,13 +44,14 @@ RGBLINK ?= $(RGBDS)rgblink
 ### Build targets
 
 .SUFFIXES:
-.PHONY: all crystal crystal11 crystal_au crystal_debug crystal11_debug clean tidy compare tools
+.PHONY: all crystal faithful crystal11 crystal_au crystal_debug crystal11_debug clean tidy compare tools
 .SECONDEXPANSION:
 .PRECIOUS:
 .SECONDARY:
 
-all: crystal
+all: crystal faithful
 crystal:         neoredblue.gbc
+faithful:        neoredblue_faithful.gbc
 crystal11:       neoredblue11.gbc
 crystal_au:      neoredblue_au.gbc
 crystal_debug:   neoredblue_debug.gbc
@@ -60,7 +62,7 @@ clean: tidy
 	find gfx/pokemon -mindepth 1 ! -path "gfx/pokemon/unown/*" \( -name "bitmask.asm" -o -name "frames.asm" -o -name "front.animated.tilemap" -o -name "front.dimensions" \) -delete
 
 tidy:
-	rm -f $(roms) $(neoredblue_obj) $(neoredblue11_obj) $(neoredblue_au_obj) $(neoredblue_debug_obj) $(neoredblue11_debug_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym) rgbdscheck.o
+	rm -f $(roms) $(neoredblue_obj) $(neoredblue_faithful_obj) $(neoredblue11_obj) $(neoredblue_au_obj) $(neoredblue_debug_obj) $(neoredblue11_debug_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym) rgbdscheck.o
 	$(MAKE) clean -C tools/
 
 compare: $(roms)
@@ -76,11 +78,12 @@ ifeq ($(DEBUG),1)
 RGBASMFLAGS += -E
 endif
 
-$(neoredblue_obj):         RGBASMFLAGS +=
-$(neoredblue11_obj):       RGBASMFLAGS += -D _CRYSTAL11
-$(neoredblue_au_obj):      RGBASMFLAGS += -D _CRYSTAL11 -D _CRYSTAL_AU
-$(neoredblue_debug_obj):   RGBASMFLAGS += -D _DEBUG
-$(neoredblue11_debug_obj): RGBASMFLAGS += -D _CRYSTAL11 -D _DEBUG
+$(neoredblue_obj):         			RGBASMFLAGS +=
+$(neoredblue_faithful_obj):         RGBASMFLAGS += -D _FAITHFUL
+$(neoredblue11_obj):       			RGBASMFLAGS += -D _CRYSTAL11
+$(neoredblue_au_obj):      			RGBASMFLAGS += -D _CRYSTAL11 -D _CRYSTAL_AU
+$(neoredblue_debug_obj):   			RGBASMFLAGS += -D _DEBUG
+$(neoredblue11_debug_obj): 			RGBASMFLAGS += -D _CRYSTAL11 -D _DEBUG
 
 rgbdscheck.o: rgbdscheck.asm
 	$(RGBASM) -o $@ $<
@@ -101,6 +104,7 @@ $(info $(shell $(MAKE) -C tools))
 
 # Dependencies for shared objects objects
 $(foreach obj, $(neoredblue_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
+$(foreach obj, $(neoredblue_faithful_obj), $(eval $(call DEP,$(obj),$(obj:_faithful.o=.asm))))
 $(foreach obj, $(neoredblue11_obj), $(eval $(call DEP,$(obj),$(obj:11.o=.asm))))
 $(foreach obj, $(neoredblue_au_obj), $(eval $(call DEP,$(obj),$(obj:_au.o=.asm))))
 $(foreach obj, $(neoredblue_debug_obj), $(eval $(call DEP,$(obj),$(obj:_debug.o=.asm))))
@@ -109,17 +113,19 @@ $(foreach obj, $(neoredblue11_debug_obj), $(eval $(call DEP,$(obj),$(obj:11_debu
 endif
 
 
-neoredblue_opt         = -Cjv -t PM_CRYSTAL -i BYTE -n 0 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
-neoredblue11_opt       = -Cjv -t PM_CRYSTAL -i BYTE -n 1 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
-neoredblue_au_opt      = -Cjv -t PM_CRYSTAL -i BYTU -n 0 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
-neoredblue_debug_opt   = -Cjv -t PM_CRYSTAL -i BYTE -n 0 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
-neoredblue11_debug_opt = -Cjv -t PM_CRYSTAL -i BYTE -n 1 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
+neoredblue_opt         			= -Cjv -t PM_CRYSTAL -i BYTE -n 0 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
+neoredblue_faithful_opt         = -Cjv -t PM_CRYSTAL -i BYTE -n 0 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
+neoredblue11_opt       			= -Cjv -t PM_CRYSTAL -i BYTE -n 1 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
+neoredblue_au_opt     			= -Cjv -t PM_CRYSTAL -i BYTU -n 0 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
+neoredblue_debug_opt  			= -Cjv -t PM_CRYSTAL -i BYTE -n 0 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
+neoredblue11_debug_opt 			= -Cjv -t PM_CRYSTAL -i BYTE -n 1 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
 
-neoredblue_base         = us
-neoredblue11_base       = us
-neoredblue_au_base      = us
-neoredblue_debug_base   = dbg
-neoredblue11_debug_base = dbg
+neoredblue_base          = us
+neoredblue_faithful_base = us
+neoredblue11_base        = us
+neoredblue_au_base       = us
+neoredblue_debug_base    = dbg
+neoredblue11_debug_base  = dbg
 
 %.gbc: $$(%_obj) layout.link
 	$(RGBLINK) -n $*.sym -m $*.map -l layout.link -o $@ $(filter %.o,$^)

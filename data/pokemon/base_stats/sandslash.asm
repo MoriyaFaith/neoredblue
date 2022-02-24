@@ -1,7 +1,12 @@
 	db SANDSLASH ; 028
 
+if DEF(FAITHFUL)
 	db  75, 100, 110,  65,  45,  55
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  75, 100, 110,  80,  45,  70
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db GROUND, GROUND ; type
 	db 90 ; catch rate

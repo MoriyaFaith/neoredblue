@@ -1,7 +1,12 @@
 	db HOOTHOOT ; 163
 
+if DEF(FAITHFUL)
 	db  60,  30,  30,  50,  36,  56
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  60,  25,  30,  50,  41,  56
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db NORMAL, FLYING ; type
 	db 255 ; catch rate

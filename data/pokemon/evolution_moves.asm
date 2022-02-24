@@ -8,7 +8,7 @@ EvolutionMoves::
 	db WING_ATTACK  ; CHARIZARD  ; 06
 	db NO_MOVE      ; SQUIRTLE   ; 07
 	db NO_MOVE      ; WARTORTLE  ; 08
-	db NO_MOVE      ; BLASTOISE  ; 09
+	db METAL_CLAW   ; BLASTOISE  ; 09
 	db NO_MOVE      ; CATERPIE   ; 0a
 	db HARDEN       ; METAPOD    ; 0b
 	db CONFUSION    ; BUTTERFREE ; 0c
@@ -165,9 +165,9 @@ EvolutionMoves::
 	db NO_MOVE      ; HOOTHOOT   ; a3
 	db CONFUSION    ; NOCTOWL    ; a4
 	db NO_MOVE      ; LEDYBA     ; a5
-	db NO_MOVE      ; LEDIAN     ; a6
+	db MACH_PUNCH   ; LEDIAN     ; a6
 	db NO_MOVE      ; SPINARAK   ; a7
-	db NO_MOVE      ; ARIADOS    ; a8
+	db SPIDER_WEB   ; ARIADOS    ; a8
 	db NO_MOVE      ; CROBAT     ; a9
 	db NO_MOVE      ; CHINCHOU   ; aa
 	db NO_MOVE      ; LANTURN    ; ab
@@ -238,7 +238,7 @@ EvolutionMoves::
 	db NO_MOVE      ; TYROGUE    ; ec
 	db ROLLING_KICK ; HITMONTOP  ; ed
 	db NO_MOVE      ; SMOOCHUM   ; ee
-	db NO_MOVE      ; ELEKID     ; ef
+	db NO_MOVE      ; WEAVILE    ; ef
 	db NO_MOVE      ; MAGBY      ; f0
 	db NO_MOVE      ; MILTANK    ; f1
 	db NO_MOVE      ; BLISSEY    ; f2

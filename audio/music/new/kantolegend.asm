@@ -38,7 +38,7 @@ Music_DV_KantoLegendary_Ch1:
 	tempo 106
 ;Bar 2
 	volume_envelope 10, 2
-	duty_cycle 0
+	duty_cycle 1
 	octave 5
 	;note C#, 0 | WARNING: Rounded down to 0
 	octave 3
@@ -192,9 +192,21 @@ Music_DV_KantoLegendary_Ch1:
 ;Bar 26
 	duty_cycle 3
 	octave 5
-	volume_envelope 10, 7
 	note D_, 16
 	rest 16
+;Bar 28
+	volume_envelope 6, 7
+	octave 5
+	note D_, 4 ; WARNING: Auto-Sync says: Rounded up!
+	octave 4
+	note D_, 4 ; WARNING: Auto-Sync says: Rounded up!
+	note A_, 4 ; WARNING: Auto-Sync says: Rounded up!
+	note D_, 4 ; WARNING: Auto-Sync says: Rounded up!
+;Bar 29
+	note A_, 4 ; WARNING: Auto-Sync says: Rounded up!
+	note D_, 4 ; WARNING: Auto-Sync says: Rounded up!
+	note A#, 4 ; WARNING: Auto-Sync says: Rounded up!
+	note G_, 4 ; WARNING: Auto-Sync says: Rounded up!
 ;Bar 28
 	octave 5
 	note D_, 4 ; WARNING: Auto-Sync says: Rounded up!
@@ -207,47 +219,19 @@ Music_DV_KantoLegendary_Ch1:
 	note D_, 4 ; WARNING: Auto-Sync says: Rounded up!
 	note A#, 4 ; WARNING: Auto-Sync says: Rounded up!
 	note G_, 4 ; WARNING: Auto-Sync says: Rounded up!
-	rest 16
-	rest 16
-	rest 16
-;Bar 33
-	duty_cycle 0
-	octave 1
-	note D_, 1
-	;note E_, 0 | WARNING: Rounded down to 0
-	note F_, 1
-	;note G_, 0 | WARNING: Rounded down to 0
-	note A_, 1
-	;note B_, 0 | WARNING: Rounded down to 0
-	octave 2
-	note C_, 1
-	;note D_, 0 | WARNING: Rounded down to 0
-	note E_, 1
-	;note F_, 0 | WARNING: Rounded down to 0
-	note G_, 1
-	;note A_, 0 | WARNING: Rounded down to 0
-	note B_, 1
-	octave 3
-	;note C_, 0 | WARNING: Rounded down to 0
-	note D_, 1
-	;note E_, 0 | WARNING: Rounded down to 0
-	note F_, 1
-	;note G_, 0 | WARNING: Rounded down to 0
-	note A_, 1
-	;note B_, 0 | WARNING: Rounded down to 0
-	octave 4
-	note C_, 1
-	;note D_, 0 | WARNING: Rounded down to 0
-	note E_, 1
-	;note F_, 0 | WARNING: Rounded down to 0
-	note G_, 1
-	;note A_, 0 | WARNING: Rounded down to 0
-	note B_, 1
+;Bar 28
 	octave 5
-	;note C_, 0 | WARNING: Rounded down to 0
-	note D_, 1
-	;note E_, 0 | WARNING: Rounded down to 0
-	note F_, 1
+	note D_, 4 ; WARNING: Auto-Sync says: Rounded up!
+	octave 4
+	note D_, 4 ; WARNING: Auto-Sync says: Rounded up!
+	note A_, 4 ; WARNING: Auto-Sync says: Rounded up!
+	note D_, 4 ; WARNING: Auto-Sync says: Rounded up!
+;Bar 33
+	note A_, 4 ; WARNING: Auto-Sync says: Rounded up!
+	note D_, 4 ; WARNING: Auto-Sync says: Rounded up!
+	note A#, 4 ; WARNING: Auto-Sync says: Rounded up!
+	note G_, 4 ; WARNING: Auto-Sync says: Rounded up!
+	volume_envelope 10, 7
 ;Bar 34
 	tempo 142
 	;note G_, 0 | WARNING: Rounded down to 0
@@ -367,9 +351,21 @@ Music_DV_KantoLegendary_Ch2:
 	note B_, 1
 ;Bar 2
 	rest 16
+;Bar 3
 	rest 16
-	rest 16
-	rest 16
+;Bar 4
+	octave 2
+	note G#, 2
+	rest 6
+	note G#, 2
+	rest 6
+;Bar 5
+	note G#, 2
+	rest 6
+	note G#, 2
+	rest 2
+	note F#, 2
+	rest 2
 ;Bar 6
 	duty_cycle 3
 	octave 3
@@ -457,7 +453,7 @@ Music_DV_KantoLegendary_Ch2:
 ;Bar 25
 	note E_, 8
 	note G_, 8
-	volume_envelope 10, 7
+	volume_envelope 6, 7
 ;Bar 26
 	duty_cycle 1
 	octave 3
@@ -495,7 +491,7 @@ Music_DV_KantoLegendary_Ch2:
 	note C_, 16
 ;Bar 33
 	note D_, 16
-	volume_envelope 10, 7
+	volume_envelope 7, 7
 ;Bar 34
 	duty_cycle 0
 	octave 4
@@ -566,6 +562,7 @@ Music_DV_KantoLegendary_Ch2:
 	note G#, 1
 	note D#, 1
 ;Bar 38
+	volume_envelope 10, 7
 	duty_cycle 3
 	octave 2
 	note A#, 6
@@ -610,11 +607,13 @@ Music_DV_KantoLegendary_Ch2:
 	note D#, 2
 	note F_, 2
 ;Bar 44
+	volume_envelope 9, -7
 	note F#, 8
 	note A#, 8
 ;Bar 45
 	note G#, 8
 	note B_, 8
+	volume_envelope 9, 7
 	sound_loop 0, .loop
 	sound_ret
 
@@ -1079,17 +1078,45 @@ Music_DV_KantoLegendary_Ch4:
 	toggle_noise 3
 	drum_speed 12
 ;Bar 1
-	rest 12
+	drum_note 11, 1
+	drum_note 3, 1
+	drum_note 3, 1
+	drum_note 11, 1
+	drum_note 3, 1
+	drum_note 3, 1
+	drum_note 11, 1
+	drum_note 3, 1
+	drum_note 3, 1
+	drum_note 11, 1
+	drum_note 3, 1
+	drum_note 3, 1
 ;Bar 2
-	drum_note 12, 8
-	rest 16
-	rest 16
-	rest 16
-	rest 8
+	drum_note 3, 4
+	drum_note 11, 4
+	drum_note 3, 4
+	drum_note 11, 4
+	drum_note 3, 4
+	drum_note 11, 4
+	drum_note 3, 4
+	drum_note 11, 4
+	drum_note 3, 4
+	drum_note 11, 4
+	drum_note 3, 4
+	drum_note 11, 4
+	drum_note 3, 4
+	drum_note 11, 4
+	drum_note 3, 4
+	drum_note 11, 4
 ;Bar 6
-	drum_note 12, 8
-	rest 16
-	rest 8
+	drum_note 3, 4
+	drum_note 11, 4
+	drum_note 3, 4
+	drum_note 11, 4
+	drum_note 3, 4
+	drum_note 11, 4
+	drum_note 3, 4
+	drum_note 11, 4
+
 ;Bar 8
 	drum_note 1, 2
 	drum_note 1, 2
@@ -1112,78 +1139,123 @@ Music_DV_KantoLegendary_Ch4:
 ;Bar 10
 .loop:
 	drum_note 12, 4
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 11
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 12
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 13
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 14
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 15
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 16
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 17
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
 	drum_note 3, 4
 ;Bar 18
 	drum_note 12, 4
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 19
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 20
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 21
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 22
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 23
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 24
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 25
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
 	drum_note 3, 4
 ;Bar 26
 	drum_note 12, 4
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 27
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 28
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 29
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 30
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 31
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 32
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 33
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
 	drum_note 3, 4
 ;Bar 34
 	drum_note 12, 3
@@ -1201,28 +1273,43 @@ Music_DV_KantoLegendary_Ch4:
 	drum_note 3, 3
 ;Bar 38
 	drum_note 12, 4
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 39
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 40
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 41
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 42
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 43
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 44
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 11, 4
+	drum_note 3, 2
+	drum_note 11, 6
+	drum_note 3, 4
 ;Bar 45
 	drum_note 3, 4
+	drum_note 11, 2
+	drum_note 11, 2
 	drum_note 3, 1
 	drum_note 3, 1
 	drum_note 3, 2

@@ -1,7 +1,12 @@
 	db CHIKORITA ; 152
 
+if DEF(FAITHFUL)
 	db  45,  49,  65,  45,  49,  65
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  50,  44,  70,  40,  44,  70
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db GRASS, GRASS ; type
 	db 45 ; catch rate

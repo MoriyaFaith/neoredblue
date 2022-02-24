@@ -338,7 +338,7 @@ Music_BlueBattle_Ch2:
 ;Bar 7
 	octave 3
 	duty_cycle 0
-	volume_envelope 5, 7
+	volume_envelope 7, 7
 	note E_, 1
 	note G#, 1
 	note B_, 1
@@ -885,118 +885,216 @@ Music_BlueBattle_Ch4:
 	drum_note 3, 2
 	drum_note 3, 2
 	drum_note 3, 2
-	drum_note 3, 6
+	drum_note 3, 2
 ;Bar 3
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 4
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 5
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 6
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 7
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 8
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 9
-	drum_note 3, 8
-	drum_note 3, 6
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 10
-	drum_note 3, 4
-	drum_note 3, 4
-	drum_note 3, 4
-	drum_note 3, 6
+	drum_note 1, 2
+	drum_note 3, 2
+	drum_note 1, 2
+	drum_note 3, 2
+	drum_note 1, 2
+	drum_note 3, 2
+	drum_note 1, 2
+	drum_note 3, 2
 ;Bar 11
 .loop:
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 12
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 13
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 14
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 15
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 16
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 17
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 18
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 19
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 20
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 21
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 22
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 23
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 24
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 25
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 26
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 27
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 28
+	drum_note 1, 4
 	drum_note 3, 4
 	drum_note 3, 2
 	drum_note 3, 2
 	drum_note 3, 2
-	drum_note 3, 6
+	drum_note 3, 2
 ;Bar 29
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 30
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 31
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 32
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 33
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 34
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 35
-	drum_note 3, 8
-	drum_note 3, 12
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 36
+	drum_note 1, 8
 	drum_note 3, 2
 	drum_note 3, 2
 	drum_note 3, 2
 	drum_note 3, 2
-	rest 4
 	sound_loop 0, .loop
 	sound_ret
 

@@ -1,7 +1,12 @@
 	db MAGCARGO ; 219
 
+if DEF(FAITHFUL)
 	db  50,  50, 120,  30,  80,  80
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  90,  50, 130,  30, 100, 110
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db FIRE, ROCK ; type
 	db 75 ; catch rate

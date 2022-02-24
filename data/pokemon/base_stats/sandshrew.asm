@@ -1,7 +1,12 @@
 	db SANDSHREW ; 027
 
+if DEF(FAITHFUL)
 	db  50,  75,  85,  40,  20,  30
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  50,  75,  85,  50,  20,  40
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db GROUND, GROUND ; type
 	db 255 ; catch rate

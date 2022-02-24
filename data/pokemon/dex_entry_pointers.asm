@@ -173,8 +173,8 @@ PokedexDataPointerTable:
 	dw ChinchouPokedexEntry
 	dw LanturnPokedexEntry
 	dw PichuPokedexEntry
-	dw CleffaPokedexEntry
-	dw IgglybuffPokedexEntry
+	dw HonchkrowPokedexEntry
+	dw MismagiusPokedexEntry
 	dw TogepiPokedexEntry
 	dw TogeticPokedexEntry
 	dw NatuPokedexEntry
@@ -239,8 +239,8 @@ PokedexDataPointerTable:
 	dw TyroguePokedexEntry
 	dw HitmontopPokedexEntry
 	dw SmoochumPokedexEntry
-	dw ElekidPokedexEntry
-	dw MagbyPokedexEntry
+	dw WeavilePokedexEntry
+	dw GliscorPokedexEntry
 	dw MiltankPokedexEntry
 	dw BlisseyPokedexEntry
 	dw RaikouPokedexEntry

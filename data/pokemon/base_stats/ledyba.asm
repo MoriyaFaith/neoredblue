@@ -1,7 +1,12 @@
 	db LEDYBA ; 165
 
+if DEF(FAITHFUL)
 	db  40,  20,  30,  55,  40,  80
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  40,  45,  30,  55,  40,  55
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db BUG, FLYING ; type
 	db 255 ; catch rate

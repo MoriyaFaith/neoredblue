@@ -1,7 +1,12 @@
 	db GIRAFARIG ; 203
 
+if DEF(FAITHFUL)
 	db  70,  80,  65,  85,  90,  65
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  80,  55,  70, 100, 110,  85
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db NORMAL, PSYCHIC_TYPE ; type
 	db 60 ; catch rate

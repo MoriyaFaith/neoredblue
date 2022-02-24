@@ -41,7 +41,7 @@ NewBarkGroupSprites:
 	db SPRITE_BLUE
 	db SPRITE_BUG_CATCHER
 	db SPRITE_OAK
-	db SPRITE_KURT
+	db SPRITE_SAGE
 	db SPRITE_SWIMMER_GIRL
 	db SPRITE_SWIMMER_GUY
 	; max 9 of 9 walking sprites

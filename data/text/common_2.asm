@@ -865,7 +865,7 @@ _MailClearedPutAwayText::
 	prompt
 
 _MailPackFullText::
-	text "The PACK is full."
+	text "The BAG is full."
 	prompt
 
 _MailMessageLostText::
@@ -1517,7 +1517,7 @@ _PokemonNotEnoughHPText::
 
 _MayRegisterItemText::
 	text "An item in your"
-	line "PACK may be"
+	line "BAG may be"
 
 	para "registered for use"
 	line "on SELECT Button."

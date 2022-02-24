@@ -342,8 +342,13 @@ GameFreakLogo_Done:
 	ret
 
 GameFreakDittoPaletteFade:
-INCLUDE "gfx/splash/ditto_fade.pal"
+INCLUDE "gfx/splash_crystal/ditto_fade.pal"
 
 GameFreakLogoGFX:
-INCBIN "gfx/splash/gamefreak_presents.1bpp"
-INCBIN "gfx/splash/gamefreak_logo.1bpp"
+INCBIN "gfx/splash_crystal/gamefreak_presents.1bpp"
+INCBIN "gfx/splash_crystal/gamefreak_logo.1bpp"
+
+FallingStar:
+INCBIN "gfx/splash/falling_star.2bpp"
+FallingStarEnd:
+

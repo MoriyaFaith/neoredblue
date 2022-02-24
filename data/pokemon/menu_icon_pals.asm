@@ -176,8 +176,8 @@ MonMenuIconPals:
 	icon_pals BLUE, TEAL ; CHINCHOU
 	icon_pals BLUE, TEAL ; LANTURN
 	icon_pals RED, BLUE ; PICHU
-	icon_pals PINK, RED ; CLEFFA
-	icon_pals PINK, RED ; IGGLYBUFF
+	icon_pals RED, PINK ; HONCHKROW
+	icon_pals PURPLE, TEAL ; MISMAGIUS
 	icon_pals RED, BLUE ; TOGEPI
 	icon_pals RED, BLUE ; TOGETIC
 	icon_pals GREEN, RED ; NATU
@@ -241,9 +241,9 @@ MonMenuIconPals:
 	icon_pals BROWN, GREEN ; SMEARGLE
 	icon_pals BROWN, BLUE ; TYROGUE
 	icon_pals BROWN, BLUE ; HITMONTOP
-	icon_pals BROWN, RED ; ELEKID
+	icon_pals RED, PINK ; WEAVILE
 	icon_pals RED, PINK ; SMOOCHUM
-	icon_pals RED, BROWN ; MAGBY
+	icon_pals PURPLE, BLUE ; GLISCOR
 	icon_pals PINK, BLUE ; MILTANK
 	icon_pals PINK, RED ; BLISSEY
 	icon_pals BROWN, RED ; RAIKOU

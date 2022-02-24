@@ -196,6 +196,12 @@ _CGB_PokegearPals:
 
 _CGB_StatsScreenHPPals:
 	ld de, wBGPals1
+	ld hl, ExpBarPalette
+	call LoadPalette_White_Col1_Col2_Black ; exp palette
+	ld a, [wCurPartySpecies]
+	ld bc, wTempMonDVs
+	call GetPlayerOrMonPalettePointer
+	call LoadPalette_White_Col1_Col2_Black ; mon palette
 	ld a, [wCurHPPal]
 	ld l, a
 	ld h, 0
@@ -204,12 +210,6 @@ _CGB_StatsScreenHPPals:
 	ld bc, HPBarPals
 	add hl, bc
 	call LoadPalette_White_Col1_Col2_Black ; hp palette
-	ld a, [wCurPartySpecies]
-	ld bc, wTempMonDVs
-	call GetPlayerOrMonPalettePointer
-	call LoadPalette_White_Col1_Col2_Black ; mon palette
-	ld hl, ExpBarPalette
-	call LoadPalette_White_Col1_Col2_Black ; exp palette
 	ld hl, StatsScreenPagePals
 	ld de, wBGPals1 palette 3
 	ld bc, 3 palettes ; pink, green, and blue page palettes
@@ -218,26 +218,26 @@ _CGB_StatsScreenHPPals:
 	call WipeAttrmap
 
 	hlcoord 0, 0, wAttrmap
-	lb bc, 8, SCREEN_WIDTH
+	lb bc, SCREEN_HEIGHT, 7
 	ld a, $1 ; mon palette
 	call FillBoxCGB
 
-	hlcoord 10, 16, wAttrmap
-	ld bc, 10
+	hlcoord 0, 10, wAttrmap
+	ld bc, 6
 	ld a, $2 ; exp palette
 	call ByteFill
 
-	hlcoord 13, 5, wAttrmap
+	hlcoord 1, 13, wAttrmap
 	lb bc, 2, 2
 	ld a, $3 ; pink page palette
 	call FillBoxCGB
 
-	hlcoord 15, 5, wAttrmap
+	hlcoord 3, 13, wAttrmap
 	lb bc, 2, 2
 	ld a, $4 ; green page palette
 	call FillBoxCGB
 
-	hlcoord 17, 5, wAttrmap
+	hlcoord 5, 13, wAttrmap
 	lb bc, 2, 2
 	ld a, $5 ; blue page palette
 	call FillBoxCGB
@@ -880,7 +880,7 @@ _CGB_GamefreakLogo:
 	ret
 
 .GamefreakDittoPalette:
-INCLUDE "gfx/splash/ditto.pal"
+INCLUDE "gfx/splash_crystal/ditto.pal"
 
 _CGB_PlayerOrMonFrontpicPals:
 	ld de, wBGPals1

@@ -1,9 +1,15 @@
 	db LEDIAN ; 166
-
+if DEF(FAITHFUL)
 	db  55,  35,  50,  85,  55, 110
 	;   hp  atk  def  spd  sat  sdf
 
 	db BUG, FLYING ; type
+else
+	db  55,  90,  50,  85,  55,  55
+	;   hp  atk  def  spd  sat  sdf
+
+	db BUG, FIGHTING ; type
+endc
 	db 90 ; catch rate
 	db 134 ; base exp
 	db NO_ITEM, NO_ITEM ; items

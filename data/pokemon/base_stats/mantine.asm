@@ -1,7 +1,12 @@
 	db MANTINE ; 226
 
+if DEF(FAITHFUL)
 	db  65,  40,  70,  70,  80, 140
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  65,  40,  70,  75,  90, 140
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db WATER, FLYING ; type
 	db 25 ; catch rate

@@ -3,7 +3,12 @@
 	db  95, 125,  79,  81,  60, 100
 	;   hp  atk  def  spd  sat  sdf
 
+if DEF(FAITHFUL)
 	db WATER, FLYING ; type
+else
+	db WATER, DARK ; type
+endc
+
 	db 45 ; catch rate
 	db 214 ; base exp
 	db NO_ITEM, NO_ITEM ; items

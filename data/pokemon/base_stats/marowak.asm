@@ -1,9 +1,15 @@
 	db MAROWAK ; 105
 
+if DEF(FAITHFUL)
 	db  60,  80, 110,  45,  50,  80
 	;   hp  atk  def  spd  sat  sdf
-
 	db GROUND, GROUND ; type
+else
+	db  70,  80, 125,  70,  75,  80
+	;   hp  atk  def  spd  sat  sdf
+	db GROUND, GHOST ; type
+endc
+
 	db 75 ; catch rate
 	db 124 ; base exp
 	db NO_ITEM, THICK_CLUB ; items

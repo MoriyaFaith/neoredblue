@@ -3,7 +3,12 @@
 	db  60,  45,  50,  70,  80,  80
 	;   hp  atk  def  spd  sat  sdf
 
+if DEF(FAITHFUL)
 	db BUG, FLYING ; type
+else
+	db BUG, PSYCHIC_TYPE ; type
+endc
+
 	db 45 ; catch rate
 	db 160 ; base exp
 	db NO_ITEM, SILVERPOWDER ; items

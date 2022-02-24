@@ -1,7 +1,12 @@
 	db DELIBIRD ; 225
 
+if DEF(FAITHFUL)
 	db  45,  55,  45,  75,  65,  45
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  85,  65,  87,  95,  85,  93
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db ICE, FLYING ; type
 	db 45 ; catch rate

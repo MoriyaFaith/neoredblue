@@ -394,8 +394,8 @@ INCBIN "gfx/footprints/crobat.1bpp",     footprint_top
 INCBIN "gfx/footprints/chinchou.1bpp",   footprint_top
 INCBIN "gfx/footprints/lanturn.1bpp",    footprint_top
 INCBIN "gfx/footprints/pichu.1bpp",      footprint_top
-INCBIN "gfx/footprints/cleffa.1bpp",     footprint_top
-INCBIN "gfx/footprints/igglybuff.1bpp",  footprint_top
+INCBIN "gfx/footprints/honchkrow.1bpp",  footprint_top
+INCBIN "gfx/footprints/mismagius.1bpp",  footprint_top
 INCBIN "gfx/footprints/togepi.1bpp",     footprint_top
 INCBIN "gfx/footprints/togetic.1bpp",    footprint_top
 ; 169-176 bottom halves
@@ -403,8 +403,8 @@ INCBIN "gfx/footprints/crobat.1bpp",     footprint_bottom
 INCBIN "gfx/footprints/chinchou.1bpp",   footprint_bottom
 INCBIN "gfx/footprints/lanturn.1bpp",    footprint_bottom
 INCBIN "gfx/footprints/pichu.1bpp",      footprint_bottom
-INCBIN "gfx/footprints/cleffa.1bpp",     footprint_bottom
-INCBIN "gfx/footprints/igglybuff.1bpp",  footprint_bottom
+INCBIN "gfx/footprints/honchkrow.1bpp",  footprint_bottom
+INCBIN "gfx/footprints/mismagius.1bpp",  footprint_bottom
 INCBIN "gfx/footprints/togepi.1bpp",     footprint_bottom
 INCBIN "gfx/footprints/togetic.1bpp",    footprint_bottom
 ; 177-184 top halves
@@ -541,7 +541,7 @@ INCBIN "gfx/footprints/tyrogue.1bpp",    footprint_top
 INCBIN "gfx/footprints/hitmontop.1bpp",  footprint_top
 INCBIN "gfx/footprints/smoochum.1bpp",   footprint_top
 INCBIN "gfx/footprints/elekid.1bpp",     footprint_top
-INCBIN "gfx/footprints/magby.1bpp",      footprint_top
+INCBIN "gfx/footprints/gliscor.1bpp",    footprint_top
 ; 233-240 bottom halves
 INCBIN "gfx/footprints/porygon2.1bpp",   footprint_bottom
 INCBIN "gfx/footprints/stantler.1bpp",   footprint_bottom
@@ -550,7 +550,7 @@ INCBIN "gfx/footprints/tyrogue.1bpp",    footprint_bottom
 INCBIN "gfx/footprints/hitmontop.1bpp",  footprint_bottom
 INCBIN "gfx/footprints/smoochum.1bpp",   footprint_bottom
 INCBIN "gfx/footprints/elekid.1bpp",     footprint_bottom
-INCBIN "gfx/footprints/magby.1bpp",      footprint_bottom
+INCBIN "gfx/footprints/gliscor.1bpp",    footprint_bottom
 ; 241-248 top halves
 INCBIN "gfx/footprints/miltank.1bpp",    footprint_top
 INCBIN "gfx/footprints/blissey.1bpp",    footprint_top

@@ -1,7 +1,12 @@
 	db QUILAVA ; 156
 
+if DEF(FAITHFUL)
 	db  58,  64,  58,  80,  80,  65
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  58,  89,  53,  90,  60,  55
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db FIRE, FIRE ; type
 	db 45 ; catch rate

@@ -515,7 +515,7 @@ PichuEggMoves:
 	db DOUBLESLAP
 	db -1 ; end
 
-CleffaEggMoves:
+ClefairyEggMoves:
 	db PRESENT
 	db METRONOME
 	db AMNESIA
@@ -524,7 +524,7 @@ CleffaEggMoves:
 	db MIMIC
 	db -1 ; end
 
-IgglybuffEggMoves:
+JigglypuffEggMoves:
 	db PERISH_SONG
 	db PRESENT
 	db FAINT_ATTACK
@@ -778,7 +778,7 @@ SmoochumEggMoves:
 	db MEDITATE
 	db -1 ; end
 
-ElekidEggMoves:
+ElectabuzzEggMoves:
 	db KARATE_CHOP
 	db BARRIER
 	db ROLLING_KICK
@@ -786,7 +786,7 @@ ElekidEggMoves:
 	db CROSS_CHOP
 	db -1 ; end
 
-MagbyEggMoves:
+MagmarEggMoves:
 	db KARATE_CHOP
 	db MEGA_PUNCH
 	db BARRIER

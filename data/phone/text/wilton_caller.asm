@@ -101,3 +101,32 @@ WiltonWantThisText:
 	para "MAHOGANY toward"
 	line "BLACKTHORN!"
 	done
+
+WiltonItemText:
+	text "It's amazing!"
+
+	para "On @"
+	text_ram wStringBuffer5
+	text ","
+	line "@"
+	text_ram wStringBuffer4
+	text " are"
+
+	para "biting like there"
+	line "is no tomorrow."
+
+	para "<PLAY_G>, bring"
+	line "your ROD, buddy!"
+	done
+
+WiltonHurryText:
+	text "Hey, what's the"
+	line "matter with you?"
+
+	para "Aren't you coming"
+	line "over to fish for"
+	cont "REMORIAD?"
+
+	para "I'm on ROUTE 44,"
+	line "so hurry up!"
+	done

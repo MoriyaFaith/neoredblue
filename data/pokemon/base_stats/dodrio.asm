@@ -1,7 +1,12 @@
 	db DODRIO ; 085
 
+if DEF(FAITHFUL)
 	db  60, 110,  70, 100,  60,  60
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  80, 120,  75, 100,  60,  65
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db NORMAL, FLYING ; type
 	db 45 ; catch rate

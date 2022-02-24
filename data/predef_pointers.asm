@@ -12,6 +12,7 @@ PredefPointers::
 	add_predef HealParty ; this is both a special and a predef
 	add_predef SmallFarFlagAction
 	add_predef ComputeHPBarPixels
+	add_predef ComputeSummaryHPBarPixels
 	add_predef FillPP
 	add_predef TryAddMonToParty
 	add_predef AddTempmonToParty
@@ -81,4 +82,5 @@ PredefPointers::
 	add_predef AnimateFrontpic
 	add_predef Unused_HOF_AnimateAlignedFrontpic
 	add_predef HOF_AnimateFrontpic
+	add_predef DrawSummaryHP
 	dbw -1, DummyEndPredef ; pointless

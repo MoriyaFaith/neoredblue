@@ -143,8 +143,26 @@ Music_GiovanniBattle_Ch1:
 	note D#, 16
 ;Bar 18
 	rest 16
-	rest 16
-	rest 16
+	octave 2
+	volume_envelope 10, 7
+	note E_, 2
+	note F#, 2
+	note G_, 2
+	note B_, 4
+	octave 1
+	note B_, 2
+	octave 2
+	note E_, 2
+	note F#, 2
+;Bar 20
+	note G_, 2
+	note B_, 4
+	note A_, 2
+	note B_, 2
+	octave 3
+	note D_, 2
+	octave 2
+	note G_, 4
 ;Bar 21
 	duty_cycle 1
 	octave 4
@@ -160,9 +178,17 @@ Music_GiovanniBattle_Ch1:
 	note A_, 2
 ;Bar 22
 	note B_, 12
-	rest 16
-	rest 16
-	rest 6
+	rest 4
+	octave 3
+	note C_, 6
+	octave 2
+	note B_, 6
+	note A_, 6
+;Bar 24
+	note G_, 6
+	note A_, 4
+	note A#, 4
+	note B_, 2
 ;Bar 25
 	octave 4
 	note B_, 1
@@ -305,7 +331,7 @@ Music_GiovanniBattle_Ch2:
 	rest 4
 	note A#, 4
 ;Bar 7
-	octave 3
+	octave 2
 	note E_, 1
 	rest 1
 	note E_, 1
@@ -320,7 +346,7 @@ Music_GiovanniBattle_Ch2:
 	rest 1
 	note E_, 1
 	rest 1
-	octave 4
+	octave 3
 	note C_, 10
 ;Bar 9
 	octave 2
@@ -1013,131 +1039,188 @@ Music_GiovanniBattle_Ch4:
 	drum_note 12, 8
 ;Bar 3
 	drum_note 12, 4
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 4
 ;Bar 4
-	drum_note 3, 8
-	drum_note 3, 2
-	drum_note 3, 6
+	drum_note 3, 4
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2 
 ;Bar 5
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 3, 4
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 4
 ;Bar 6
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 4
+	drum_note 1, 2
 	drum_note 3, 2
-	drum_note 3, 6
-	drum_note 3, 8
 ;Bar 7
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 3, 4
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 2 
 ;Bar 8
-	drum_note 3, 8
-	drum_note 3, 2
-	drum_note 3, 2
+	drum_note 3, 4
+	drum_note 1, 4
+	drum_note 3, 4
+	drum_note 1, 4
 ;Bar 9
-	drum_note 3, 6
-	drum_note 3, 6
+	drum_note 1, 6
+	drum_note 1, 2
 	drum_note 3, 4
+	drum_note 1, 4
 ;Bar 10
-	drum_note 3, 2
-	drum_note 3, 4
-	drum_note 3, 2
-	drum_note 3, 4
-	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 1, 4
+	drum_note 1, 2
+	drum_note 1, 4
+	drum_note 1, 4
 ;Bar 11
 .loop:
 	drum_note 12, 4
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 3, 2
+	drum_note 1, 4
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 12
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 2
+	drum_note 1, 4
+	drum_note 1, 2
+	drum_note 3, 2
+	drum_note 1, 2
 ;Bar 13
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 2
+	drum_note 1, 4
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 14
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 2
+	drum_note 1, 4
+	drum_note 1, 2
+	drum_note 3, 2
+	drum_note 1, 2
 ;Bar 15
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 2
+	drum_note 1, 4
+	drum_note 1, 2
+	drum_note 3, 4
 ;Bar 16
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 2
+	drum_note 1, 4
+	drum_note 1, 2
+	drum_note 3, 2
+	drum_note 1, 2
 ;Bar 17
-	drum_note 3, 8
+	drum_note 1, 4
+	drum_note 3, 2
+	drum_note 1, 4
+	drum_note 1, 2
 	drum_note 3, 4
 ;Bar 18
 	drum_note 3, 2
-	drum_note 3, 4
+	drum_note 1, 4
 	drum_note 3, 2
-	drum_note 3, 4
-	drum_note 3, 4
+	drum_note 1, 2
+	drum_note 3, 2
+	drum_note 1, 2
+	drum_note 3, 2
 ;Bar 19
 	drum_note 12, 4
-	drum_note 3, 8
-	drum_note 3, 8
-;Bar 20
-	drum_note 3, 8
-	drum_note 3, 8
-;Bar 21
-	drum_note 3, 8
-	drum_note 3, 8
-;Bar 22
-	drum_note 3, 8
-	drum_note 3, 8
-;Bar 23
-	drum_note 3, 8
-	drum_note 3, 8
-;Bar 24
-	drum_note 3, 8
+	drum_note 3, 2
+	drum_note 1, 4
+	drum_note 1, 2
 	drum_note 3, 4
+;Bar 20
+	drum_note 1, 4
+	drum_note 3, 2
+	drum_note 1, 4
+	drum_note 1, 2
+	drum_note 3, 2
+	drum_note 1, 2
+;Bar 13
+	drum_note 1, 4
+	drum_note 3, 2
+	drum_note 1, 4
+	drum_note 1, 2
+	drum_note 3, 4
+;Bar 22
+	drum_note 1, 4
+	drum_note 3, 2
+	drum_note 1, 4
+	drum_note 1, 2
+	drum_note 3, 2
+	drum_note 1, 2
+;Bar 13
+	drum_note 1, 4
+	drum_note 3, 2
+	drum_note 1, 4
+	drum_note 1, 2
+	drum_note 3, 4
+;Bar 24
+	drum_note 1, 4
+	drum_note 3, 2
+	drum_note 1, 4
+	drum_note 1, 2
+	drum_note 3, 2
+	drum_note 1, 2
 ;Bar 25
 	drum_note 12, 4
-	drum_note 3, 8
+	drum_note 1, 2
 	drum_note 3, 4
+	drum_note 3, 2
+	drum_note 1, 4
 ;Bar 26
-	;note A_, 0 | WARNING: Rounded down to 0
 	drum_note 3, 2
 	drum_note 3, 4
-	;note A_, 0 | WARNING: Rounded down to 0
 	drum_note 3, 2
 	drum_note 3, 4
-	;note A_, 0 | WARNING: Rounded down to 0
 	drum_note 3, 4
 ;Bar 27
 	drum_note 12, 4
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 8
+	drum_note 1, 8
 ;Bar 28
-	drum_note 3, 6
+	drum_note 1, 6
 	drum_note 12, 2
-	drum_note 3, 4
+	drum_note 1, 4
 ;Bar 29
 	drum_note 12, 4
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 8
+	drum_note 1, 8
 ;Bar 30
-	drum_note 3, 8
-	drum_note 3, 4
+	drum_note 1, 8
+	drum_note 1, 4
 ;Bar 31
 	drum_note 12, 4
-	drum_note 3, 8
-	drum_note 3, 8
+	drum_note 1, 8
+	drum_note 1, 8
 ;Bar 32
-	drum_note 3, 6
+	drum_note 1, 6
 	drum_note 12, 2
-	drum_note 3, 4
+	drum_note 1, 4
 ;Bar 33
 	drum_note 12, 4
-	drum_note 3, 8
-	drum_note 3, 4
+	drum_note 1, 8
+	drum_note 1, 4
 ;Bar 34
-	drum_note 3, 2
-	drum_note 3, 4
-	drum_note 3, 2
+	drum_note 1, 2
+	drum_note 1, 4
+	drum_note 1, 2
 	;note A_, 0 | WARNING: Rounded down to 0
-	drum_note 3, 4
-	drum_note 3, 4
+	drum_note 1, 4
+	drum_note 1, 4
 ;Bar 35
 	drum_note 12, 4
 	rest 16
@@ -1158,16 +1241,16 @@ Music_GiovanniBattle_Ch4:
 	drum_note 12, 8
 ;Bar 41
 	;note A_, 0 | WARNING: Rounded down to 0
-	drum_note 3, 6
-	drum_note 3, 6
-	drum_note 3, 4
+	drum_note 1, 6
+	drum_note 1, 6
+	drum_note 1, 4
 ;Bar 42
 	;note A_, 0 | WARNING: Rounded down to 0
-	drum_note 3, 2
-	drum_note 3, 4
-	drum_note 3, 2
-	drum_note 3, 4
-	drum_note 3, 2
+	drum_note 1, 2
+	drum_note 1, 4
+	drum_note 1, 2
+	drum_note 1, 4
+	drum_note 1, 2
 	rest 2
 	sound_loop 0, .loop
 	sound_ret

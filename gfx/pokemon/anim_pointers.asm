@@ -1,5 +1,4 @@
 AnimationPointers:
-	table_width 2, AnimationPointers
 	dw BulbasaurAnimation
 	dw IvysaurAnimation
 	dw VenusaurAnimation
@@ -172,8 +171,8 @@ AnimationPointers:
 	dw ChinchouAnimation
 	dw LanturnAnimation
 	dw PichuAnimation
-	dw CleffaAnimation
-	dw IgglybuffAnimation
+	dw HonchkrowAnimation
+	dw MismagiusAnimation
 	dw TogepiAnimation
 	dw TogeticAnimation
 	dw NatuAnimation
@@ -238,8 +237,8 @@ AnimationPointers:
 	dw TyrogueAnimation
 	dw HitmontopAnimation
 	dw SmoochumAnimation
-	dw ElekidAnimation
-	dw MagbyAnimation
+	dw WeavileAnimation
+	dw GliscorAnimation
 	dw MiltankAnimation
 	dw BlisseyAnimation
 	dw RaikouAnimation
@@ -251,4 +250,3 @@ AnimationPointers:
 	dw LugiaAnimation
 	dw HoOhAnimation
 	dw CelebiAnimation
-	assert_table_length NUM_POKEMON

@@ -1,7 +1,12 @@
 	db KINGDRA ; 230
 
+if DEF(FAITHFUL)
 	db  75,  95,  95,  85,  95,  95
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  75,  75, 105, 100, 110,  75
+	;   hp  atk  def  spd  sat  sdf
+endc	
 
 	db WATER, DRAGON ; type
 	db 45 ; catch rate

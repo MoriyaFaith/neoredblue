@@ -1,7 +1,12 @@
 	db STANTLER ; 234
 
+if DEF(FAITHFUL)
 	db  73,  95,  62,  85,  85,  65
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  78, 105,  62,  85,  95,  65
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db NORMAL, NORMAL ; type
 	db 45 ; catch rate

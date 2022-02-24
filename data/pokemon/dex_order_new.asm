@@ -36,12 +36,10 @@ NewPokedexOrder:
 	db NIDORAN_M  ; 20
 	db NIDORINO   ; 21
 	db NIDOKING   ; 22
-	db CLEFFA     ; ad
 	db CLEFAIRY   ; 23
 	db CLEFABLE   ; 24
 	db VULPIX     ; 25
 	db NINETALES  ; 26
-	db IGGLYBUFF  ; ae
 	db JIGGLYPUFF ; 27
 	db WIGGLYTUFF ; 28
 	db ZUBAT      ; 29
@@ -139,9 +137,7 @@ NewPokedexOrder:
 	db SCIZOR     ; d4
 	db SMOOCHUM   ; ee
 	db JYNX       ; 7c
-	db ELEKID     ; ef
 	db ELECTABUZZ ; 7d
-	db MAGBY      ; f0
 	db MAGMAR     ; 7e
 	db PINSIR     ; 7f
 	db TAUROS     ; 80

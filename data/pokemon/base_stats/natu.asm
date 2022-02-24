@@ -1,7 +1,12 @@
 	db NATU ; 177
 
+if DEF(FAITHFUL)
 	db  40,  50,  45,  70,  70,  45
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  40,  50,  45,  75,  75,  45
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db PSYCHIC_TYPE, FLYING ; type
 	db 190 ; catch rate
