@@ -33,7 +33,7 @@ Route2_MapEvents:
 	db 0, 0 ; filler
 
 	def_warp_events
-	warp_event  3, 43, VIRIDIAN_FOREST_SOUTH_GATE, 1
+	warp_event  3, 43, VIRIDIAN_FOREST_SOUTH_GATE, 2
 	warp_event  3, 11, VIRIDIAN_FOREST_NORTH_GATE, 3
 	warp_event  4, 11, VIRIDIAN_FOREST_NORTH_GATE, 3
 	warp_event 16, 35, ROUTE_2_GATE, 3

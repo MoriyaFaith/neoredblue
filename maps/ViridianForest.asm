@@ -208,7 +208,7 @@ ViridianForest_MapEvents:
 	def_warp_events
 	warp_event 16, 47, VIRIDIAN_FOREST_SOUTH_GATE, 3
 	warp_event 17, 47, VIRIDIAN_FOREST_SOUTH_GATE, 3
-	warp_event  1,  1, VIRIDIAN_FOREST_NORTH_GATE, 1
+	warp_event  1,  1, VIRIDIAN_FOREST_NORTH_GATE, 2
 
 	def_coord_events
 

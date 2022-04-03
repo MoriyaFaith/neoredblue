@@ -48,6 +48,9 @@ INCLUDE "maps/HallOfFame.asm"
 SECTION "Map Scripts 5", ROMX
 
 INCLUDE "maps/ViridianForest.asm"
+INCLUDE "maps/PewterCity.asm"
+INCLUDE "maps/PewterPokecenter.asm"
+INCLUDE "maps/PewterPokemart.asm"
 
 SECTION "Map Scripts 6", ROMX
 

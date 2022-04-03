@@ -10,11 +10,22 @@ ViridianPokecenter_MapScripts:
 ViridianPokecenterNurseScript:
 	jumpstd PokecenterNurseScript
 
+
+ViridianPokecenterGuy:
+	jumptext ViridianPokecenterGuyText
+
 ViridianPokecenter2:
 	jumptextfaceplayer ViridianPokeCenterText2
 
 ViridianPokecenter3:
 	jumptextfaceplayer ViridianPokeCenterText3
+
+ViridianPokecenterGuyText:
+	text "#MON CENTERs"
+	line "heal your tired,"
+	cont "hurt or fainted"
+	cont "#MON!"
+	done
 
 ViridianPokeCenterText2::
 	text "You can use that"
@@ -44,6 +55,7 @@ ViridianPokecenter_MapEvents:
 	def_coord_events
 
 	def_bg_events
+	bg_event 0,  4, BGEVENT_READ, ViridianPokecenterGuy
 
 	def_object_events
 	object_event  3,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianPokecenterNurseScript, -1

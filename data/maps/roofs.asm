@@ -12,12 +12,13 @@ MapGroupRoofs:
 ; values are indexes for Roofs (see below)
 	table_width 1, MapGroupRoofs
 	db -1             ;  0
-	db -1             ;  1
+	db -1             ;  1 
 	db ROOF_OLIVINE   ;  2 (Battle Tower)
-	db -1			  ;  3 (New Bark)
-	db -1			  ;  3 (Viridian City)
-	db -1             ;  4
-	db -1             ;  4 (Dungeons)
+	db -1			  ;  3 (Pallet Town)
+	db -1			  ;  4 (Viridian City)
+	db -1			  ;  5 (Pewter City)
+	db -1             ;  6
+	db -1             ;  7 (Dungeons)
 	assert_table_length NUM_MAP_GROUPS + 1
 
 Roofs:

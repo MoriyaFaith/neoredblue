@@ -148,6 +148,7 @@ INCLUDE "audio/music/shop.asm"
 INCLUDE "audio/music/new/kantolegend.asm"
 INCLUDE "audio/music/new/bluebattle.asm"
 INCLUDE "audio/music/new/giovannibattle.asm"
+INCLUDE "audio/music/jigglypuffsong.asm"
 
 SECTION "Sound Effects", ROMX
 

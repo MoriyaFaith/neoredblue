@@ -8,6 +8,7 @@ OutdoorSprites:
 	dw BattleTowerGroupSprites
 	dw NewBarkGroupSprites
 	dw ViridianGroupSprites
+	dw PewterGroupSprites
 	dw IndigoGroupSprites
 	dw DungeonGroupSprites
 	assert_table_length NUM_MAP_GROUPS
@@ -35,6 +36,23 @@ BattleTowerGroupSprites:
 
 ViridianGroupSprites:
 NewBarkGroupSprites:
+	db SPRITE_TEACHER
+	db SPRITE_FISHER
+	db SPRITE_YOUNGSTER
+	db SPRITE_BLUE
+	db SPRITE_BUG_CATCHER
+	db SPRITE_OAK
+	db SPRITE_SAGE
+	db SPRITE_SWIMMER_GIRL
+	db SPRITE_SWIMMER_GUY
+	; max 9 of 9 walking sprites
+	db SPRITE_GRAMPS ; can't walk
+	db SPRITE_CLERK ; can't walk
+	db SPRITE_POKE_BALL
+	db SPRITE_KURT_ASLEEP
+	db 0 ; end
+
+PewterGroupSprites: ;duplicate of Pewter-Viridian atm as a placeholder.
 	db SPRITE_TEACHER
 	db SPRITE_FISHER
 	db SPRITE_YOUNGSTER

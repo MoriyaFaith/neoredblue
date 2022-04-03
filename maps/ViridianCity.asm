@@ -91,16 +91,17 @@ NoCoffeeScript:
 	step_end
 
 LeaveGymScript:
+	turnobject PLAYER, UP
 	opentext 
 	writetext ViridianCityLockedDoorsText
 	waitbutton
 	closetext
 	applymovement PLAYER, .WalkDown
-.skip
+.skip ;for when There's actually an event flag for Giovanni being in the gym
 	end
 
 .WalkDown
-	step DOWN
+	jump_step DOWN
 	step_end
 
 ViridianCityLeaderScript:
@@ -112,7 +113,21 @@ ViridianCityNoCovfefeScript:
 ViridianCityCatchTutorialScript:
 	faceplayer
 	opentext
-	special NameRater
+	writetext ViridianCityOldManCoffeeText
+	yesorno
+	iftrue ViridianCityRefuseTutorial
+	writetext ViridianCityOldManDexText
+	waitbutton
+	loadwildmon WEEDLE, 5
+	catchtutorial BATTLETYPE_TUTORIAL
+	opentext
+	writetext ViridianCityWeakenText
+	waitbutton
+	closetext
+	end
+
+ViridianCityRefuseTutorial:
+	writetext ViridianCityTimeisMoneyText
 	waitbutton
 	closetext
 	end
@@ -242,9 +257,9 @@ ViridianCityOldManDexText::
 	line "a #DEX."
 
 	para "When you catch a"
-	line "#MON, #DEX"
-	cont "is automatically"
-	cont "updated."
+	line "#MON, the"
+	cont "#DEX updates"
+	cont "automatically."
 
 	para "What? Don't you"
 	line "know how to catch"

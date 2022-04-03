@@ -1035,24 +1035,26 @@ OaksLabPCText:
 
 	para "…"
 
-	para "PROF.OAK, how is"
-	line "your research"
-	cont "coming along?"
+	para "Calling all"
+	line "#MON trainers!"
 
-	para "I'm still plugging"
-	line "away."
+	para "The ELITE FOUR"
+	line "of #MON LEAGUE"
+	cont "are ready to take"
+	cont "on all comers!"
 
-	para "I heard rumors"
-	line "that <PLAY_G> is"
+	para "Bring your best"
+	line "#MON and see"
+	cont "how you rate as a"
+	cont "trainer!"
 
-	para "getting quite a"
-	line "reputation."
+	para "#MON LEAGUE HQ"
+	line "INDIGO PLATEAU"
 
-	para "I'm delighted to"
-	line "hear that."
-
-	para "ELM in NEW BARK"
-	line "TOWN 8-)"
+	para "PS: PROF.OAK,"
+	line "please visit us!"
+	cont "..."
+	done
 
 OaksLab_MapEvents:
 	db 0, 0 ; filler

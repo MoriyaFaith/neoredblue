@@ -72,7 +72,13 @@ ENDM
 	map_const ROUTE_2_GATE,							        5,  4
 	endgroup
 
-	newgroup INDIGO                                               ;  6
+	newgroup PEWTER												  ;  6
+	map_const PEWTER_CITY,							  	   20, 18
+	map_const PEWTER_POKECENTER,							7,  4
+	map_const PEWTER_POKEMART,			    				4,  4
+	endgroup
+
+	newgroup INDIGO                                               ;  7
 	map_const INDIGO_PLATEAU_POKECENTER_1F,                 9,  7 ;  1
 	map_const WILLS_ROOM,                                   5,  9 ;  2
 	map_const KOGAS_ROOM,                                   5,  9 ;  3

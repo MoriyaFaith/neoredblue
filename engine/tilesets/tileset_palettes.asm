@@ -12,10 +12,17 @@ LoadSpecialMapPalette:
 	jr z, .radio_tower
 	cp TILESET_MANSION
 	jr z, .mansion_mobile
+	cp TILESET_POKECENTER
+	jr z, .gen1_pokecenter
 	jr .do_nothing
 
 .pokecom_2f
 	call LoadPokeComPalette
+	scf
+	ret
+
+.gen1_pokecenter
+	call LoadPokecenterPalette
 	scf
 	ret
 
@@ -62,6 +69,17 @@ LoadPokeComPalette:
 
 PokeComPalette:
 INCLUDE "gfx/tilesets/pokecom_center.pal"
+
+LoadPokecenterPalette:
+	ld a, BANK(wBGPals1)
+	ld de, wBGPals1
+	ld hl, PokecenterPalette
+	ld bc, 8 palettes
+	call FarCopyWRAM
+	ret
+
+PokecenterPalette:
+INCLUDE "gfx/tilesets/pokecenter_gen1.pal"
 
 LoadBattleTowerInsidePalette:
 	ld a, BANK(wBGPals1)

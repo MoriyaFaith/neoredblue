@@ -110,6 +110,7 @@
 	const MUSIC_GYM_LEADER_BATTLE
 	const MUSIC_POKEMART
 	const MUSIC_GIOVANNI_BATTLE
+	const MUSIC_JIGGLYPUFF
 NUM_MUSIC_SONGS EQU const_value
 
 ; GetMapMusic picks music for this value (see home/map.asm)

@@ -60,9 +60,11 @@ ViridianCity_Blocks:
 	INCBIN "maps/ViridianCity.blk"
 
 ViridianPokecenter_Blocks:
+PewterPokecenter_Blocks:
 	INCBIN "maps/KantoPokeCenter.blk"
 
 ViridianPokemart_Blocks:
+PewterPokemart_Blocks:
 	INCBIN "maps/KantoPokeMart.blk"
 
 Route2Gate_Blocks:
@@ -72,6 +74,9 @@ ViridianForestSouthGate_Blocks:
 
 ViridianForest_Blocks:
 	INCBIN "maps/ViridianForest.blk"
+
+PewterCity_Blocks:
+	INCBIN "maps/PewterCity.blk"
 
 SECTION "Map Blocks 3", ROMX
 
